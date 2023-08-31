@@ -6,6 +6,7 @@ from globb import Globb
 
 import endpoints.catch_all
 import endpoints.static_routes
+import endpoints.head
 
 
 if __name__ == "__main__":
