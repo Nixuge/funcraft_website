@@ -1,0 +1,1 @@
+var _cachedColors={},getGameColor=function(o,r){var a=o;r&&(a+="%light");var e=_cachedColors[a];if(void 0!==e)return e;var c=$("<div>").addClass("game-"+(r?"l":"")+"bg-"+o);return $("body").append(c),e=c.css("background-color"),c.remove(),_cachedColors[a]=e,e};
