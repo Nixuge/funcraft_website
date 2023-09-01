@@ -99,6 +99,11 @@
                     </div>
                 </div>
             </div>
+            {% if ban %}
+                <div class="player-alert"> 
+                    Ce joueur est banni ({{ ban }})&nbsp;!<br> Il n'a pas respecté <a href="https://community.funcraft.net/threads/regles-generales-serveur-et-forum.13/#post-29" target="_blank"> les règles du serveur</a>. 
+                </div>
+            {% endif %}
             <ul class="nav nav-tabs nav-tabs-top">
                 <li class="active"><a data-toggle="tab" href="#player-stats">Statistiques</a></li>
                 <li><a data-toggle="tab" href="#player-friends">Amis</a></li>

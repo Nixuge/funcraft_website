@@ -47,6 +47,8 @@ def joueur(joueur: str):
 
     pstats = json.loads(gzip.decompress(row[7]))
 
+    ban = row[11]
+
 
     return render_template("joueur.html", 
                            username=username,
@@ -55,6 +57,7 @@ def joueur(joueur: str):
                            parties_jouees=parties_jouees,
                            inscription=inscription,
                            derniere_connexion=derniere_connexion,
+                           ban=ban,
                            PSTATS=pstats)
 
 
