@@ -142,7 +142,7 @@
                     </div>
                     <div id="player-friends" class="tab-pane fade">
                         <h2>Amis</h2>
-                        <div id="player-friends-content" data-url="/fr/joueur/10/friendlist">
+                        <div id="player-friends-content" data-url="TO_BE_REPLACED_IN_JS">
                             <div class="loading-block"> <i class="fa fa-cog fa-spin fa-fw"></i> Chargement... </div>
                         </div>
                     </div>
@@ -211,6 +211,9 @@
     <!-- NEW SCRIPTS BELOW. USED TO BUILD THE DIVS SHOWING THE PRECISE STATS -->
     <!-- AS THOSE WOULD PROLLY USE SOME CPU SERVER SIDE -->
     <!-- NEED TO BE DECLARED BEFORE THE ORIGINAL SCRIPTS -->
+    <script>
+        const username = '{{ username }}';
+    </script>
     <script src="/static/new/nixutils.js"></script>
     <script src="/static/new/timedropdownpicker.js"></script>
     <script src="/static/new/statsbuilder.js"></script>
@@ -222,90 +225,3 @@
 </body>
 
 </html>
-
-
-||FRIENDS PART, TO PARSE LATER||
-
-<div class="players-heads">
-    <div class="head tooltips" title="Amoshy"> <a href="/fr/joueur/2104712"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Amoshy/s/f14ef0ab640bc1d6ab75bd2d866c9ce470133635">
-        </a> </div>
-    <div class="head tooltips" title="Aposlash1"> <a href="/fr/joueur/10627"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Aposlash1/s/f0f5bedd0f0875d7ed8e5d1652686edad5a2e0a3">
-        </a> </div>
-    <div class="head tooltips" title="AykaNoo_"> <a href="/fr/joueur/1014741"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/AykaNoo_/s/76170364eab15cad9ac9a00ef2807833365263e8">
-        </a> </div>
-    <div class="head tooltips" title="Bossah"> <a href="/fr/joueur/1670098"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Bossah/s/f26fef2d15a508c055ab1be95ea63418644b6d5e">
-        </a> </div>
-    <div class="head tooltips" title="Commando34"> <a href="/fr/joueur/2"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Commando34/s/acf5f216b2096fe4550a9c764f417b2b158c3937">
-        </a> </div>
-    <div class="head tooltips" title="Fantom_Z"> <a href="/fr/joueur/6168"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Fantom_Z/s/d62bdf471a89d2f225ba020ffed8990e1222168c">
-        </a> </div>
-    <div class="head tooltips" title="fauglen"> <a href="/fr/joueur/1058836"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/fauglen/s/e706aba6f919dd04be13500b336f6b7f96d82d28">
-        </a> </div>
-    <div class="head tooltips" title="Flambe_"> <a href="/fr/joueur/59"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Flambe_/s/339e9baab16e546fcbb5be198e8048d36a4e85e0">
-        </a> </div>
-    <div class="head tooltips" title="Hardstyle_Antho"> <a href="/fr/joueur/5"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Hardstyle_Antho/s/ead409e7632dd2d62019663769c0b26a0042819d">
-        </a> </div>
-    <div class="head tooltips" title="Hegans"> <a href="/fr/joueur/513"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Hegans/s/c5c960488c77d928b6cc7d053c45a404f924bcf5">
-        </a> </div>
-    <div class="head tooltips" title="iPrisc"> <a href="/fr/joueur/100005"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/iPrisc/s/3e27f092cea588b2c7cb20461da8cb699c8e28f5">
-        </a> </div>
-    <div class="head tooltips" title="LaitEau"> <a href="/fr/joueur/159"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/LaitEau/s/328d55bc400e4d1d4c86a085f52fb68e39694577">
-        </a> </div>
-    <div class="head tooltips" title="Lythed"> <a href="/fr/joueur/1749"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Lythed/s/595d5ac6030da362abdf8cde9c34e281de513244">
-        </a> </div>
-    <div class="head tooltips" title="Mohul_"> <a href="/fr/joueur/9483"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Mohul_/s/e521a27ed1a9cdc9314c9a8cf6108b2e7e62240a">
-        </a> </div>
-    <div class="head tooltips" title="nathan818"> <a href="/fr/joueur/1"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/nathan818/s/eaf4b36df5d129ddde8b02daa0ff42b0c44acd62">
-        </a> </div>
-    <div class="head tooltips" title="notgreen3"> <a href="/fr/joueur/2155380"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/notgreen3/s/ddeca1a417f462a916274433812a95452f12a96c">
-        </a> </div>
-    <div class="head tooltips" title="Peexiz"> <a href="/fr/joueur/737"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Peexiz/s/a8c36476a2059eb6bc76a1997b6d61eff9c9e0f4">
-        </a> </div>
-    <div class="head tooltips" title="Sentrance"> <a href="/fr/joueur/4"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Sentrance/s/fb5244c320f93ac444adb16debbb76cf793ee7ce">
-        </a> </div>
-    <div class="head tooltips" title="ShaZen"> <a href="/fr/joueur/385341"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/ShaZen/s/b2d7e9ad92c687ae30612f5a7c310f472b1b4481">
-        </a> </div>
-    <div class="head tooltips" title="sonoGKO"> <a href="/fr/joueur/2050788"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/sonoGKO/s/d7f08a272025bdd319e7210b3d3bc169ea829f2a">
-        </a> </div>
-    <div class="head tooltips" title="Styleure"> <a href="/fr/joueur/3"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Styleure/s/eac617788b5777dc405e6ed0877d829701f7ac81">
-        </a> </div>
-    <div class="head tooltips" title="TheBrainV8"> <a href="/fr/joueur/1743826"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/TheBrainV8/s/3a86dc68883bb3c48d4a62a54f801b45a41ce5ee">
-        </a> </div>
-    <div class="head tooltips" title="Tishoko_"> <a href="/fr/joueur/6360"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Tishoko_/s/f83f10f946eb1ab71a67abf2df6232cbbdde1093">
-        </a> </div>
-    <div class="head tooltips" title="TRLayn"> <a href="/fr/joueur/343432"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/TRLayn/s/bef252207a4cf5db55920903d4f2e82cac3f8c7b">
-        </a> </div>
-    <div class="head tooltips" title="Under_Zertox"> <a href="/fr/joueur/2142945"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Under_Zertox/s/df9fc7d8bd785f02a2a1c854088f26a87b9e48d6">
-        </a> </div>
-    <div class="head tooltips" title="ziboulaga"> <a href="/fr/joueur/289"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/ziboulaga/s/5bae9c8b382d4778b67447bc25fdde00d99cc71e">
-        </a> </div>
-    <div class="head tooltips" title="_Markk_"> <a href="/fr/joueur/407580"> <img
-                src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/_Markk_/s/cfad19b8a2060445de365f6e35369b5a104a64c1">
-        </a> </div>
-</div>

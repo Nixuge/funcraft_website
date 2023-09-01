@@ -1,0 +1,7 @@
+<div class="players-heads">
+{% for joueur in joueurs %}
+    <div class="head tooltips" title="{{ joueur }}"> <a href="/fr/joueur/{{ joueur }}"> <img
+        src="/_u/avatar/head/username/{{ joueur }}">
+    </a> </div>
+{%- endfor %}
+</div>

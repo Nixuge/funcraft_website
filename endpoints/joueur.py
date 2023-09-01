@@ -50,7 +50,7 @@ def joueur(joueur: str):
     ban = row[11]
 
 
-    return render_template("joueur.html", 
+    return render_template("joueur/joueur.html", 
                            username=username,
                            rank=rank,
                            gloires=gloires,
@@ -63,14 +63,17 @@ def joueur(joueur: str):
 
 
 
-
-
-
-
-
-
-
 @app.route("/fr/joueur/<joueur>/friendlist")
 @app.route("/joueur/<joueur>/friendlist")
 def friendlist(joueur: str):
-    return "Not implemented yet"
+    row = Globb.cursor.execute(query, (joueur, )).fetchone()
+    if not row or not row[2]:
+        return "Player does not exist", 400
+    
+    if row[8] == None:
+        return "Aucun ami", 200
+    
+    friendlist = json.loads(gzip.decompress(row[8]))
+    
+    return render_template("joueur/friendlist.html", 
+                           joueurs=friendlist)
