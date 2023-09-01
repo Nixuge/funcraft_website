@@ -54,3 +54,7 @@ def nous_contacter():
 @app.route("/tos")
 def legal_notice():
     return redirect("https://www.ascentia.fr/tos/funcraft/")
+
+@app.route("/about")
+def about_addition():
+    return render_template("addition/about.html")
