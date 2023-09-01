@@ -32,7 +32,7 @@ def joueurs():
 @app.route("/fr/classement")
 @app.route("/classement")
 def classement():
-    return render_template("classement.html")
+    return render_template("classement/index.html")
 
 @app.route("/fr/boutique")
 @app.route("/boutique")
