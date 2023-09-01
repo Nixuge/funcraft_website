@@ -6,44 +6,10 @@ Not meant to be the highest code quality, just to work.
 This is meant to move the cpu load away from the server to the client,
 to have a server as lightweight as possible.
 */
-const monthsTable = [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre"
-]
-
-function formatMonth(month_raw) {
-    let new_month = month_raw.replace("month-", "");
-    const data = new_month.split("-");
-    const year = data[0];
-    const month = monthsTable[data[1]-1]
-    return `${month} ${year}`
-}
-
-function getMonthListOrdered() {
-    let months = [];
-    // @ts-ignore
-    for (const [month, _] of Object.entries(pstats)) {
-        months.push(month);
-    }
-    months.splice(0, 1);
-    months.sort().reverse();
-    return months;
-}
-
 let fullDirtyHtml = `<li><a href="javascript:;" data-value="always">Toujours</a></li>`;
 
 let currentYear = ""
-for (const month of getMonthListOrdered()) {
+for (const month of orderedMonths) {
     const thisYear = month.split("-")[1];
     if (thisYear !== currentYear) {
         currentYear = thisYear;
