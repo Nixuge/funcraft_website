@@ -11,8 +11,7 @@ function buildHeader() {
     <tr>
     <th>#</th>
     <th>Joueur</th>`;
-    // @ts-ignore
-    for (const stat of statsKeys[gameName]) {
+    for (const stat of leaderboardKeys[gameName]) {
         headerHtmlStr += `<th>${stat["displayName"]}</th>`;
     }
     headerHtmlStr += `
@@ -25,22 +24,28 @@ function buildHeader() {
 function buildPlayer(ranking, data) {
     let playerHtmlStr = (ranking > 3) ? 
         "<tr>" : `<tr class="podium-${ranking}-bg">`;
-    // <tr class="podium-1-bg">
-    //     <td>1</td>
-    //     <td> <a href="/fr/joueur/430195/Bouhero"> Bouhero </a> </td>
-    //     <td class="value">4 181 122</td>
-    //     <td class="value">47 946</td>
-    //     <td class="value">47 015</td>
-    //     <td class="value">931</td>
-    //     <td class="value">1916h 26m</td>
-    //     <td class="value">637 122</td>
-    //     <td class="value">309 470</td>
-    // </tr>
+
+    console.log(data);
+    playerHtmlStr += `<td>${ranking}</td>`;
+    playerHtmlStr += `<td> <a href="/joueur/${data["name"]}"> ${data["name"]} </a> </td>`;
+    for (const stat of leaderboardKeys[gameName]) {
+        if (stat["hidden"] == true)
+            continue;
+
+        const key = stat["id"];
+        let value = formatStatResult(key, rankings[ranking]["stats"][key])
+        playerHtmlStr += `<td class="value">${value}</td>`
+                        
+    }
+
+    playerHtmlStr += "</tr>"
+    return playerHtmlStr;
 }
 
 function buildFullLeaderboard() {
-    let leaderboardHtmlStr = "<tbody>";
-    // @ts-ignore
+    let leaderboardHtmlStr = buildHeader();
+    leaderboardHtmlStr += "<tbody>";
+    
     for (const [ranking, data] of Object.entries(rankings)) {
         leaderboardHtmlStr += buildPlayer(ranking, data);
     }
@@ -49,18 +54,4 @@ function buildFullLeaderboard() {
 }
 
 const leaderboard = document.getElementsByClassName("leaderboard-table")[0];
-// leaderboard.innerHTML = buildFullLeaderboard()
-
-{/* <thead>
-<tr>
-    <th>#</th>
-    <th>Joueur</th>
-    <th>Points</th>
-    <th>Parties</th>
-    <th>Victoires</th>
-    <th>D&eacute;faites</th>
-    <th>Temps de jeu</th>
-    <th>Kills</th>
-    <th>Morts</th>
-</tr>
-</thead> */}
+leaderboard.innerHTML = buildFullLeaderboard()

@@ -28,6 +28,9 @@ def classement(jeu, mois):
     if not table_name:
         return "Invalid game/month", 400
     
+    if not "always" in mois:
+        mois = "month-" + mois
+
     query_rankings = f"SELECT * FROM {table_name} ORDER BY ranking LIMIT 100"
     rankings = Globb.cursor_rankings.execute(query_rankings).fetchall()
 
@@ -52,6 +55,8 @@ def classement(jeu, mois):
         user_stats_dict: dict = json.loads(gzip.decompress(corresponding_user[7]))
         month_stats_dict = user_stats_dict.get(mois)
         if not month_stats_dict:
+            print(mois)
+            print(str(user_stats_dict.keys()))
             return "Stats dict doesn't exist for player. This shouldn't happen.", 500
         month_stats_dict = month_stats_dict.get(jeu)
         if not month_stats_dict:
@@ -68,5 +73,6 @@ def classement(jeu, mois):
     return render_template("classement/classement.html",
                            rankings = final_dict,
                            game_name = jeu,
-                           game_display_name = jeu.upper() + "_TEMP"
+                           game_display_name = jeu
+                           # TODO: PROPER CAPITALIZATION/GAME NAME
                            )

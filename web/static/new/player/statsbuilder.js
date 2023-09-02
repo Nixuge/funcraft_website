@@ -25,16 +25,8 @@ function buildStatsHeader() {
 // Only need to build once since it's universal
 const statsHeader = buildStatsHeader();
 
-function formatStatResult(key, value) {
-    // console.log(key);
-    if (key == "play_time")
-        return formatSToHHMM(value)
-    return Math.round(value);
-}
-
 function getStat(gameName, month, row) {
-    // @ts-ignore
-    const monthStat = pstats[month];
+        const monthStat = pstats[month];
     if (monthStat == undefined)
         return "-";
 
@@ -90,8 +82,7 @@ function buildGame(gameName, gameDisplayName) {
 
 function buildAllGames() {
     let fullHtmlStr = "";
-    // @ts-ignore
-    for (const [game, meta] of Object.entries(pgames)) {
+        for (const [game, meta] of Object.entries(pgames)) {
         if (meta["hasStats"] == false)
             continue;
         fullHtmlStr += buildGame(game, meta["name"]);

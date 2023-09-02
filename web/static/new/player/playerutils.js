@@ -114,6 +114,50 @@ const statsKeys = {
     ]
 }
 
+const monthsTable = [
+    "Janvier",
+    "Février",
+    "Mars",
+    "Avril",
+    "Mai",
+    "Juin",
+    "Juillet",
+    "Août",
+    "Septembre",
+    "Octobre",
+    "Novembre",
+    "Décembre"
+]
+
+// Used in the dropdown picker
+function formatMonth(month_raw) {
+    let new_month = month_raw.replace("month-", "");
+    const data = new_month.split("-");
+    const year = data[0];
+    const month = monthsTable[data[1]-1]
+    return `${month} ${year}`
+}
+
+// Used in the stats month viewer
+// (same as original but suboptimal? may be replaced by above)
+function formatMonthNoYear(month_raw) {
+    let new_month = month_raw.replace("month-", "");
+    const data = new_month.split("-");
+    return monthsTable[data[1]-1];
+}
+
+function getMonthListOrdered() {
+    let months = [];
+    // @ts-ignore
+    for (const [month, _] of Object.entries(pstats)) {
+        months.push(month);
+    }
+    months.splice(0, 1);
+    months.sort().reverse();
+    return months;
+}
+const orderedMonths = getMonthListOrdered();
+
 // Replace the friendlist data url.
 // Done this way as i wanted to make the website stay as original as possible,
 // even if it's kinda suboptimal in some places.
