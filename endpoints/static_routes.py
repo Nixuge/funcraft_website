@@ -31,7 +31,7 @@ def joueurs():
 
 @app.route("/fr/classement")
 @app.route("/classement")
-def classement():
+def classement_index():
     return render_template("classement/index.html")
 
 @app.route("/fr/boutique")

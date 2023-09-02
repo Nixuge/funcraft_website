@@ -11,3 +11,6 @@ class Globb:
     )
     connection = sqlite3.connect("funcraft_database.db")
     cursor = connection.cursor()
+
+    connection_rankings = sqlite3.connect("rankings.db")
+    cursor_rankings = connection_rankings.cursor()

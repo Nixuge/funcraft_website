@@ -8,6 +8,7 @@ import endpoints.catch_all
 import endpoints.static_routes
 import endpoints.head
 import endpoints.joueur
+import endpoints.classement
 
 
 if __name__ == "__main__":
