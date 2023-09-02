@@ -27,9 +27,21 @@ const statsHeader = buildStatsHeader();
 
 function getClassement(gameName, month) {
     const ranking = rankings[gameName][month];
+    if (ranking == null)
+        return "-";
+
     const suffix = (ranking === 1) ? 
-        "<sup>ere</sup>" : "<sup>ème</sup>";
-    return ranking + suffix;
+        "<sup>er</sup>" : "<sup>ème</sup>";
+    
+    let full_text;
+    if (ranking <= 3) {
+        full_text = `<span class="mccolor-DARK_RED">${ranking + suffix} <i class="fa fa-trophy"></i></span>`;
+    } else if (ranking <= 100) {
+        full_text = `<span class="mccolor-RED">${ranking + suffix} <i class="fa fa-trophy"></i></span>`;
+    } else {
+        full_text = ranking + suffix;
+    }
+    return full_text;
 }
 
 function getStat(gameName, month, row) {
