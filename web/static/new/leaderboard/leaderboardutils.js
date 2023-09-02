@@ -6,7 +6,7 @@ Not meant to be the highest code quality, just to work.
 This is meant to move the cpu load away from the server to the client,
 to have a server as lightweight as possible.
 */
-const statsKeys = {
+const leaderboardKeys = {
     "blitz": [
         {id: "glory", displayName: "Points"},
         {id: "games_played", displayName: "Parties"},
@@ -119,7 +119,6 @@ function setActiveGame() {
     // @ts-ignore
     const navElem = document.getElementsByClassName(`nav-games-${gameName}`)[0];
     navElem.classList.add("active")
-    console.log(navElem.classList);
 }
 
 setActiveGame();
