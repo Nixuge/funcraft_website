@@ -18,9 +18,6 @@ def joueur_redirect():
     return redirect(f"/joueur/{username}")
     
 
-# TODO?: fix the month picker, as as of now it displays all months even if not needed.
-# TODO: replace total stats as they're embeded in the html directly
-
 @app.route('/fr/joueur/<id>/<joueur>')
 @app.route("/joueur/<id>/<joueur>")
 def joueur_id(id: str, joueur: str):

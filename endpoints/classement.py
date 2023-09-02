@@ -73,7 +73,6 @@ def classement(jeu, mois):
     return render_template("classement/classement.html",
                            rankings = final_dict,
                            game_name = jeu,
-                           # TODO: PROPER CAPITALIZATION/GAME NAME
                            game_display_name = Globb.game_names.get(jeu, "Report if you see this."),
                            month = mois
                            )

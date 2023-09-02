@@ -12,5 +12,6 @@ import endpoints.classement
 
 
 if __name__ == "__main__":
+    print("Starting webserver")
     http_server = WSGIServer(('', 15784), Globb.app)
     http_server.serve_forever()
