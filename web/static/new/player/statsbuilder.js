@@ -25,8 +25,18 @@ function buildStatsHeader() {
 // Only need to build once since it's universal
 const statsHeader = buildStatsHeader();
 
+function getClassement(gameName, month) {
+    const ranking = rankings[gameName][month];
+    const suffix = (ranking === 1) ? 
+        "<sup>ere</sup>" : "<sup>ème</sup>";
+    return ranking + suffix;
+}
+
 function getStat(gameName, month, row) {
-        const monthStat = pstats[month];
+    if (row === "classement")
+        return getClassement(gameName, month);
+    
+    const monthStat = pstats[month];
     if (monthStat == undefined)
         return "-";
 
@@ -70,7 +80,7 @@ function buildGame(gameName, gameDisplayName) {
         <div class="player-stats-info">`;
     
     gameHtmlStr += statsHeader;
-
+    gameHtmlStr += buildStatsEntry(gameName, {"displayName": `<a href="/fr/classement/${gameName}"> Classement </a>`, "id": "classement"})
     for (const key of statsKeys[gameName]) {
         gameHtmlStr += buildStatsEntry(gameName, key)
     } 

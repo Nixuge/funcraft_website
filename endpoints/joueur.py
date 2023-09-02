@@ -48,6 +48,11 @@ def joueur(joueur: str):
     pstats = json.loads(gzip.decompress(row[7]))
 
     ban = row[11]
+    
+    if row[13]:
+        rankings = json.loads(gzip.decompress(row[13]))
+    else:
+        rankings = {}
 
 
     return render_template("joueur/joueur.html", 
@@ -58,6 +63,7 @@ def joueur(joueur: str):
                            inscription=inscription,
                            derniere_connexion=derniere_connexion,
                            ban=ban,
+                           rankings=rankings,
                            PSTATS=pstats)
 
 

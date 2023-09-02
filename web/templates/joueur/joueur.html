@@ -213,6 +213,7 @@
     <!-- NEED TO BE DECLARED BEFORE THE ORIGINAL SCRIPTS -->
     <script>
         const username = '{{ username }}';
+        const rankings = JSON.parse('{{ rankings | tojson}}');
     </script>
     <script src="/static/new/nixutils.js"></script>
     <script src="/static/new/player/playerutils.js"></script>
