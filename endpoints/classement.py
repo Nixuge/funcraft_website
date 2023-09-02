@@ -30,8 +30,15 @@ def classement(jeu, mois):
     
     mois_prefix = "month-" + mois if not "always" in mois else mois
 
-    query_rankings = f"SELECT * FROM {table_name} ORDER BY ranking LIMIT 100"
-    rankings = Globb.cursor_rankings.execute(query_rankings).fetchall()
+    try:
+        query_rankings = f"SELECT * FROM {table_name} ORDER BY ranking LIMIT 100"
+        rankings = Globb.cursor_rankings.execute(query_rankings).fetchall()
+    except:
+        return f"""<h1>===== Temporary page =====<br>
+        Unavailable game/month combination.<br>
+        The selector for this combination will be removed in a future update.<br><br>
+        <a href='/classement/{jeu}/always'>Back to always stats</a>
+        <style>*{'{text-align: center}'}</style>"""
 
     query_grab_user = f"SELECT * FROM funcraft_stats WHERE id IN {tuple([x[0] for x in rankings])};"
     users = Globb.cursor.execute(query_grab_user).fetchall()
