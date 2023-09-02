@@ -80,7 +80,7 @@
                 <p>Sélection du jeu :</p>
                 <div class="nav-games"> 
                     <a class="nav-games-rush " href="/fr/classement/rush"> Rush MDT </a>
-                    <a class="nav-games-hikabrain active" href="/fr/classement/hikabrain"> HikaBrain </a>
+                    <a class="nav-games-hikabrain " href="/fr/classement/hikabrain"> HikaBrain </a>
                     <a class="nav-games-skywars " href="/fr/classement/skywars"> SkyWars </a>
                     <a class="nav-games-mma " href="/fr/classement/mma"> Octogone </a>
                     <a class="nav-games-shootcraft " href="/fr/classement/shootcraft"> ShootCraft </a>
@@ -1285,8 +1285,9 @@
         const gameName = '{{ game_name }}';
         const rankings = JSON.parse('{{ rankings | tojson}}');
     </script>
-    <script src="/static/new/classement/classementbuilder.js"></script>
-    <script src="/static/new/classement/podiumbuilder.js"></script>
+    <script src="/static/new/leaderboard/leaderboardutils.js"></script>
+    <script src="/static/new/leaderboard/leaderboardbuilder.js"></script>
+    <script src="/static/new/leaderboard/podiumbuilder.js"></script>
     <!-- END NEW SCRIPTS -->
 
     <script src="/static/def.js?v=85144d41"></script>
