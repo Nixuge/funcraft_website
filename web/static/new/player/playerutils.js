@@ -11,106 +11,106 @@ const statsKeys = {
         {id: "glory", displayName: "Points"},
         {id: "games_played", displayName: "Parties"},
         {id: "play_time", displayName: "Temps de jeu"},
+        {id: "games_won", displayName: "Victoires"},
+        {id: "games_lost", displayName: "Défaites"},
         {id: "kills", displayName: "Kills"},
         {id: "deaths", displayName: "Morts"},
-        {id: "nexus_jumps", displayName: "Dégats au Nexus"},
-        {id: "games_won", displayName: "Victoires"},
-        {id: "games_lost", displayName: "Défaites", "nonOriginal": true}
+        {id: "nexus_jumps", displayName: "Dégats au Nexus"}
     ],
     "hikabrain": [
         {id: "glory", displayName: "Points"},
         {id: "games_played", displayName: "Parties"},
+        {id: "games_won", displayName: "Victoires"},
+        {id: "games_lost", displayName: "Défaites"},
         {id: "play_time", displayName: "Temps de jeu"},
         {id: "kills", displayName: "Kills"},
-        {id: "deaths", displayName: "Morts"},
-        {id: "games_won", displayName: "Victoires"},
-        {id: "games_lost", displayName: "Défaites"}
+        {id: "deaths", displayName: "Morts"}
     ],
     "infected": [
         {id: "glory", displayName: "Points"},
         {id: "games_played", displayName: "Parties"},
+        {id: "games_won", displayName: "Victoires"},
+        {id: "games_lost", displayName: "Défaites", nonOriginal: true},
         {id: "play_time", displayName: "Temps de jeu"},
         {id: "kills", displayName: "Kills"},
-        {id: "deaths", displayName: "Morts"},
-        {id: "games_won", displayName: "Victoires"},
-        {id: "games_lost", displayName: "Défaites", "nonOriginal": true}
+        {id: "deaths", displayName: "Morts"}
     ],
     "landrush": [
         {id: "glory", displayName: "Points"},
         {id: "games_played", displayName: "Parties"},
+        {id: "games_won", displayName: "Victoires"},
+        {id: "games_lost", displayName: "Défaites"},
         {id: "play_time", displayName: "Temps de jeu"},
         {id: "kills", displayName: "Kills"},
         {id: "deaths", displayName: "Morts"},
-        {id: "games_won", displayName: "Victoires"},
-        {id: "games_lost", displayName: "Défaites"},
         {id: "broken_beds", displayName: "Lits détruits"}
     ],
     "mma": [
         {id: "glory", displayName: "Points"},
         {id: "games_played", displayName: "Parties"},
+        {id: "games_won", displayName: "TOP 1"},
+        {id: "games_lost", displayName: "Défaites", nonOriginal: true},
         {id: "play_time", displayName: "Temps de jeu"},
         {id: "kills", displayName: "Kills"},
         {id: "deaths", displayName: "Morts"},
-        {id: "games_won", displayName: "TOP 1"},
-        {id: "games_lost", displayName: "Défaites", "nonOriginal": true},
         {id: "damages", displayName: "Dégats"}
     ],
     "pvpsmash": [
         {id: "glory", displayName: "Points"},
         {id: "games_played", displayName: "Parties"},
+        {id: "games_won", displayName: "TOP 1"},
+        {id: "games_lost", displayName: "Défaites", nonOriginal: true},
         {id: "play_time", displayName: "Temps de jeu"},
         {id: "kills", displayName: "Kills"},
         {id: "deaths", displayName: "Morts"},
-        {id: "games_won", displayName: "TOP 1"},
-        {id: "games_lost", displayName: "Défaites", "nonOriginal": true},
         {id: "damages", displayName: "Dégats"}
     ],
     "rush": [
         {id: "glory", displayName: "Points"},
         {id: "games_played", displayName: "Parties"},
+        {id: "games_won", displayName: "Victoires"},
+        {id: "games_lost", displayName: "Défaites"},
         {id: "play_time", displayName: "Temps de jeu"},
         {id: "kills", displayName: "Kills"},
         {id: "deaths", displayName: "Morts"},
-        {id: "broken_beds", displayName: "Lits détruits"},
-        {id: "games_won", displayName: "Victoires"},
-        {id: "games_lost", displayName: "Défaites"}
+        {id: "broken_beds", displayName: "Lits détruits"}
     ],
     "rushretro": [
         {id: "glory", displayName: "Points"},
         {id: "games_played", displayName: "Parties"},
+        {id: "games_won", displayName: "Victoires"},
+        {id: "games_lost", displayName: "Défaites"},
         {id: "play_time", displayName: "Temps de jeu"},
         {id: "kills", displayName: "Kills"},
         {id: "deaths", displayName: "Morts"},
-        {id: "broken_beds", displayName: "Lits détruits"},
-        {id: "games_won", displayName: "Victoires"},
-        {id: "games_lost", displayName: "Défaites"}
+        {id: "broken_beds", displayName: "Lits détruits"}
     ],
     "shootcraft": [
         {id: "glory", displayName: "Points"},
         {id: "games_played", displayName: "Parties"},
+        {id: "games_won", displayName: "TOP 1"},
+        {id: "games_lost", displayName: "Défaites", nonOriginal: true},
         {id: "play_time", displayName: "Temps de jeu"},
         {id: "kills", displayName: "Kills"},
-        {id: "deaths", displayName: "Morts"},
-        {id: "games_won", displayName: "TOP 1"},
-        {id: "games_lost", displayName: "Défaites", "nonOriginal": true}
+        {id: "deaths", displayName: "Morts"}
     ],
     "skywars": [
         {id: "glory", displayName: "Points"},
         {id: "games_played", displayName: "Parties"},
+        {id: "games_won", displayName: "TOP 1"},
+        {id: "games_lost", displayName: "Défaites", nonOriginal: true},
         {id: "play_time", displayName: "Temps de jeu"},
         {id: "kills", displayName: "Kills"},
-        {id: "deaths", displayName: "Morts"},
-        {id: "games_won", displayName: "TOP 1"},
-        {id: "games_lost", displayName: "Défaites", "nonOriginal": true}
+        {id: "deaths", displayName: "Morts"}
     ],
     "survival": [
         {id: "glory", displayName: "Points"},
         {id: "games_played", displayName: "Parties"},
+        {id: "games_won", displayName: "TOP 1"},
+        {id: "games_lost", displayName: "Défaites", nonOriginal: true},
         {id: "play_time", displayName: "Temps de jeu"},
         {id: "kills", displayName: "Kills"},
-        {id: "deaths", displayName: "Morts"},
-        {id: "games_won", displayName: "TOP 1"},
-        {id: "games_lost", displayName: "Défaites", "nonOriginal": true}
+        {id: "deaths", displayName: "Morts"}
     ]
 }
 
