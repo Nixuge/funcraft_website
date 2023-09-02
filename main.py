@@ -1,3 +1,4 @@
+#!/bin/python3
 import os
 from flask import Flask
 from gevent.pywsgi import WSGIServer
