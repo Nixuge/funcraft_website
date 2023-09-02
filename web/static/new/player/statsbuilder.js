@@ -26,6 +26,8 @@ function buildStatsHeader() {
 const statsHeader = buildStatsHeader();
 
 function getClassement(gameName, month) {
+    if (rankings == null || rankings[gameName] == null)
+        return "-";
     const ranking = rankings[gameName][month];
     if (ranking == null)
         return "-";
