@@ -12,6 +12,8 @@ function buildHeader() {
     <th>#</th>
     <th>Joueur</th>`;
     for (const stat of leaderboardKeys[gameName]) {
+        if (stat["hidden"] == true)
+            continue;
         headerHtmlStr += `<th>${stat["displayName"]}</th>`;
     }
     headerHtmlStr += `
@@ -25,7 +27,6 @@ function buildPlayer(ranking, data) {
     let playerHtmlStr = (ranking > 3) ? 
         "<tr>" : `<tr class="podium-${ranking}-bg">`;
 
-    console.log(data);
     playerHtmlStr += `<td>${ranking}</td>`;
     playerHtmlStr += `<td> <a href="/joueur/${data["name"]}"> ${data["name"]} </a> </td>`;
     for (const stat of leaderboardKeys[gameName]) {

@@ -121,4 +121,18 @@ function setActiveGame() {
     navElem.classList.add("active")
 }
 
+function setActiveMonth() {
+    const navElem = document.getElementsByClassName("nav-tabs-top")[0];
+    for (const node of navElem.children) {
+        // @ts-ignore
+        const href_split = node.children[0].href.split("/");
+        const month = href_split[href_split.length - 1];
+        if (month === currentMonth) {
+            node.classList.add("active");
+            break;
+        }
+    }
+}
+
 setActiveGame();
+setActiveMonth();
