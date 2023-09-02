@@ -14,3 +14,18 @@ class Globb:
 
     connection_rankings = sqlite3.connect("rankings.db")
     cursor_rankings = connection_rankings.cursor()
+
+    game_names = {
+        "rush": "Rush MDT",
+        "hikabrain": "HikaBrain",
+        "skywars": "SkyWars",
+        "mma": "Octogone",
+        "shootcraft": "ShootCraft",
+        "infected": "Infecté",
+        "freecube": "FreeCube",
+        "blitz": "Blitz",
+        "pvpsmash": "PvPSmash",
+        "survival": "Survival",
+        "rushretro": "Rush RETRO",
+        "landrush": "LandRush"
+    }

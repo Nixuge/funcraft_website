@@ -74,6 +74,6 @@ def classement(jeu, mois):
                            rankings = final_dict,
                            game_name = jeu,
                            # TODO: PROPER CAPITALIZATION/GAME NAME
-                           game_display_name = jeu,
+                           game_display_name = Globb.game_names.get(jeu, "Report if you see this."),
                            month = mois
                            )
