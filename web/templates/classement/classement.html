@@ -1,0 +1,1304 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Serveur Minecraft Mini-Jeux et PVP GRATUIT. Launcher Ascentia minecraft gratuit.">
+    <meta name="keywords" content="minecraft,mini-jeux,pvp,funcraft,rush,factions,launcher,ascentia,gratuit">
+    <meta name="author" content="Nathan Poirier">
+    <title>HikaBrain : Classement - FunCraft</title> <!--[if lte IE 9]>
+    <script src="/static/lib/ie_comp/ie_comp.js?v=85144d41"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <meta name="theme-color" content="#D83C00">
+    <meta name="msapplication-navbutton-color" content="#D83C00">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#D83C00">
+    <link href="/static/def.css?v=85144d41" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head>
+
+<body>
+    <div id="main-layout">
+        <header id="funhead" class="funhead-clearfix">
+            <div id="funhead-lead">
+                <div class="funhead-container">
+                    <div id="funhead-lead-logo"> <a href="/fr"> <img src="/static/funcraft/img/logo_w.png?v=85144d41"
+                                alt="Logo FunCraft"> </a> </div>
+                    <div id="funhead-lead-right"> <button type="button" class="funhead-btn-menu"> <span></span>
+                            <span></span> <span></span> </button> <a href="/fr/jouer" class="funhead-btn-play"
+                            style="margin-top:10px"> <i class="fa fa-play"></i> Comment jouer ? </a> </div>
+                    <div id="funhead-lead-ip">
+                        <div>Version : <strong>1.9</strong></div> <input id="funcraft-server-ip" type="text"
+                            value="funcraft.net" readonly="readonly" onclick="$(this).select()">
+                        <div id="funcraft-server-ip-info"></div>
+                    </div>
+                </div>
+            </div>
+            <nav id="funhead-nav">
+                <div class="funhead-container">
+                    <ul>
+                        <li> <a href="/fr">Accueil</a> </li>
+                        <li> <a href="/fr/jeux">Jeux</a> </li>
+                        <li> <a href="/fr/joueurs">Joueurs</a> </li>
+                        <li> <a href="https://community.funcraft.net/">Forum</a> </li>
+                        <li class="active"> <a href="/fr/classement">Classement</a> </li>
+                        <li> <a href="/fr/boutique"><i class="fa fa-shopping-cart"></i> Boutique </a> </li>
+                        <!-- START ADDITION --><li> <a href="/about">À propos</a> </li> <!-- END ADDITION -->
+                    </ul>
+                    <ul class="funhead-nav-right">
+                        <li> <a href="/fr/mon-compte">Mon Compte</a> </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="box box-top">
+            <div class="heading heading-top">
+                <div class="container">
+                    <div class="col-sm-3 pull-left">
+                        <form method="GET" action="https://www.funcraft.net/fr/joueurs">
+                            <div class="input-group">
+                                <input type="text" name="q" autofocus class="form-control" style="margin-top:3px;"
+                                    placeholder="Chercher un joueur">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                    <ol class="breadcrumb">
+                        <li> <a href="/fr"> <i class="fa fa-home"></i> </a> </li>
+                        <li> <a href="/fr/classement"> Classement </a> </li>
+                        <li class="active">HikaBrain</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="container margin-top">
+            <div class="box text-center">
+                <p>Sélection du jeu :</p>
+                <div class="nav-games"> 
+                    <a class="nav-games-rush " href="/fr/classement/rush"> Rush MDT </a>
+                    <a class="nav-games-hikabrain active" href="/fr/classement/hikabrain"> HikaBrain </a>
+                    <a class="nav-games-skywars " href="/fr/classement/skywars"> SkyWars </a>
+                    <a class="nav-games-mma " href="/fr/classement/mma"> Octogone </a>
+                    <a class="nav-games-shootcraft " href="/fr/classement/shootcraft"> ShootCraft </a>
+                    <a class="nav-games-infected " href="/fr/classement/infected"> Infect&eacute; </a>
+                    <a class="nav-games-blitz " href="/fr/classement/blitz"> Blitz </a>
+                    <a class="nav-games-pvpsmash " href="/fr/classement/pvpsmash"> PvPSmash </a>
+                    <a class="nav-games-survival " href="/fr/classement/survival"> Survival </a>
+                    <a class="nav-games-landrush " href="/fr/classement/landrush"> LandRush </a>
+                </div>
+            </div>
+            <h2>HikaBrain : Classement</h2>
+            <ul class="nav nav-tabs nav-tabs-top">
+                <li class="active"> <a href="/fr/classement/hikabrain/always"> Toujours </a> </li>
+                <li> <a href="/fr/classement/hikabrain/2023-08"> Ao&ucirc;t 2023 </a> </li>
+                <li> <a href="/fr/classement/hikabrain/2023-07"> Juillet 2023 </a> </li>
+                <li> <a href="/fr/classement/hikabrain/2023-06"> Juin 2023 </a> </li>
+            </ul>
+            <div class="box">
+                <div class="leaderboard-podium">
+                    <div class="podium podium-1">
+                        <div class="step"> 1 <div class="trophy game-text-hikabrain"> <i class="fa fa-trophy tooltips"
+                                    title="Trophée HikaBrain"></i> </div>
+                            <div class="head"> <a href="/fr/joueur/430195/Bouhero">
+                                    <div class="name">Bouhero</div> <img
+                                        src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Bouhero/s/6eb6d26422b864ebec65c903179d5470ec554eb6">
+                                </a> </div>
+                        </div>
+                    </div>
+                    <div class="podium podium-2">
+                        <div class="step"> 2 <div class="head"> <a href="/fr/joueur/165013/Dokasa">
+                                    <div class="name">Dokasa</div> <img
+                                        src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Dokasa/s/167ac91a7d3ee99382688a8d98ea82c0253c9217">
+                                </a> </div>
+                        </div>
+                    </div>
+                    <div class="podium podium-3">
+                        <div class="step"> 3 <div class="head"> <a href="/fr/joueur/1122611/govc">
+                                    <div class="name">govc</div> <img
+                                        src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/govc/s/81790f29ddc497b0db423b46c7ffb1714eaf2c87">
+                                </a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="table table-hover leaderboard-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Joueur</th>
+                                <th>Points</th>
+                                <th>Parties</th>
+                                <th>Victoires</th>
+                                <th>D&eacute;faites</th>
+                                <th>Temps de jeu</th>
+                                <th>Kills</th>
+                                <th>Morts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="podium-1-bg">
+                                <td>1</td>
+                                <td> <a href="/fr/joueur/430195/Bouhero"> Bouhero </a> </td>
+                                <td class="value">4 181 122</td>
+                                <td class="value">47 946</td>
+                                <td class="value">47 015</td>
+                                <td class="value">931</td>
+                                <td class="value">1916h 26m</td>
+                                <td class="value">637 122</td>
+                                <td class="value">309 470</td>
+                            </tr>
+                            <tr class="podium-2-bg">
+                                <td>2</td>
+                                <td> <a href="/fr/joueur/165013/Dokasa"> Dokasa </a> </td>
+                                <td class="value">3 792 127</td>
+                                <td class="value">27 003</td>
+                                <td class="value">26 315</td>
+                                <td class="value">688</td>
+                                <td class="value">969h 16m</td>
+                                <td class="value">246 943</td>
+                                <td class="value">172 647</td>
+                            </tr>
+                            <tr class="podium-3-bg">
+                                <td>3</td>
+                                <td> <a href="/fr/joueur/1122611/govc"> govc </a> </td>
+                                <td class="value">2 885 687</td>
+                                <td class="value">15 327</td>
+                                <td class="value">13 814</td>
+                                <td class="value">1 513</td>
+                                <td class="value">876h 40m</td>
+                                <td class="value">234 564</td>
+                                <td class="value">125 779</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td> <a href="/fr/joueur/504457/FaiPaDe1v1Hika"> FaiPaDe1v1Hika </a> </td>
+                                <td class="value">2 318 010</td>
+                                <td class="value">17 245</td>
+                                <td class="value">15 890</td>
+                                <td class="value">1 355</td>
+                                <td class="value">1001h 8m</td>
+                                <td class="value">264 400</td>
+                                <td class="value">161 846</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td> <a href="/fr/joueur/1404133/RoiTwingo"> RoiTwingo </a> </td>
+                                <td class="value">2 314 481</td>
+                                <td class="value">14 685</td>
+                                <td class="value">14 238</td>
+                                <td class="value">447</td>
+                                <td class="value">504h 0m</td>
+                                <td class="value">139 999</td>
+                                <td class="value">80 265</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td> <a href="/fr/joueur/1413905/owze"> owze </a> </td>
+                                <td class="value">2 157 113</td>
+                                <td class="value">12 413</td>
+                                <td class="value">12 019</td>
+                                <td class="value">394</td>
+                                <td class="value">434h 38m</td>
+                                <td class="value">141 291</td>
+                                <td class="value">83 931</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td> <a href="/fr/joueur/59799/JusDeCitron_"> JusDeCitron_ </a> </td>
+                                <td class="value">2 040 282</td>
+                                <td class="value">9 732</td>
+                                <td class="value">8 326</td>
+                                <td class="value">1 406</td>
+                                <td class="value">589h 29m</td>
+                                <td class="value">168 140</td>
+                                <td class="value">94 550</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td> <a href="/fr/joueur/88370/Choixpeau"> Choixpeau </a> </td>
+                                <td class="value">1 876 652</td>
+                                <td class="value">17 024</td>
+                                <td class="value">15 303</td>
+                                <td class="value">1 721</td>
+                                <td class="value">847h 40m</td>
+                                <td class="value">208 113</td>
+                                <td class="value">173 818</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td> <a href="/fr/joueur/1224871/Lazertub"> Lazertub </a> </td>
+                                <td class="value">1 810 843</td>
+                                <td class="value">14 025</td>
+                                <td class="value">10 906</td>
+                                <td class="value">3 119</td>
+                                <td class="value">759h 56m</td>
+                                <td class="value">236 479</td>
+                                <td class="value">170 532</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td> <a href="/fr/joueur/1825482/Saykzh"> Saykzh </a> </td>
+                                <td class="value">1 803 237</td>
+                                <td class="value">11 578</td>
+                                <td class="value">9 774</td>
+                                <td class="value">1 804</td>
+                                <td class="value">535h 12m</td>
+                                <td class="value">152 190</td>
+                                <td class="value">95 585</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td> <a href="/fr/joueur/502441/Celavy"> Celavy </a> </td>
+                                <td class="value">1 779 676</td>
+                                <td class="value">11 519</td>
+                                <td class="value">9 815</td>
+                                <td class="value">1 704</td>
+                                <td class="value">528h 37m</td>
+                                <td class="value">164 286</td>
+                                <td class="value">102 071</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td> <a href="/fr/joueur/953130/Takeeru"> Takeeru </a> </td>
+                                <td class="value">1 744 393</td>
+                                <td class="value">13 792</td>
+                                <td class="value">12 797</td>
+                                <td class="value">995</td>
+                                <td class="value">695h 15m</td>
+                                <td class="value">272 250</td>
+                                <td class="value">122 444</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td> <a href="/fr/joueur/132052/Skwaz"> Skwaz </a> </td>
+                                <td class="value">1 616 535</td>
+                                <td class="value">12 609</td>
+                                <td class="value">9 812</td>
+                                <td class="value">2 797</td>
+                                <td class="value">660h 43m</td>
+                                <td class="value">172 777</td>
+                                <td class="value">135 045</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td> <a href="/fr/joueur/831999/Cresus"> Cresus </a> </td>
+                                <td class="value">1 569 169</td>
+                                <td class="value">11 801</td>
+                                <td class="value">11 337</td>
+                                <td class="value">464</td>
+                                <td class="value">482h 52m</td>
+                                <td class="value">112 732</td>
+                                <td class="value">74 704</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td> <a href="/fr/joueur/13396/Impassible"> Impassible </a> </td>
+                                <td class="value">1 540 428</td>
+                                <td class="value">9 586</td>
+                                <td class="value">7 227</td>
+                                <td class="value">2 359</td>
+                                <td class="value">607h 25m</td>
+                                <td class="value">138 827</td>
+                                <td class="value">104 947</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td> <a href="/fr/joueur/2020646/pts"> pts </a> </td>
+                                <td class="value">1 508 299</td>
+                                <td class="value">16 751</td>
+                                <td class="value">16 395</td>
+                                <td class="value">356</td>
+                                <td class="value">464h 35m</td>
+                                <td class="value">107 932</td>
+                                <td class="value">74 654</td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td> <a href="/fr/joueur/174645/LeNakos"> LeNakos </a> </td>
+                                <td class="value">1 483 830</td>
+                                <td class="value">16 720</td>
+                                <td class="value">13 340</td>
+                                <td class="value">3 380</td>
+                                <td class="value">814h 34m</td>
+                                <td class="value">206 187</td>
+                                <td class="value">191 925</td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td> <a href="/fr/joueur/445313/UnLuckyy_"> UnLuckyy_ </a> </td>
+                                <td class="value">1 460 543</td>
+                                <td class="value">9 403</td>
+                                <td class="value">7 739</td>
+                                <td class="value">1 664</td>
+                                <td class="value">588h 5m</td>
+                                <td class="value">141 862</td>
+                                <td class="value">135 183</td>
+                            </tr>
+                            <tr>
+                                <td>19</td>
+                                <td> <a href="/fr/joueur/85434/ImThrough"> ImThrough </a> </td>
+                                <td class="value">1 457 821</td>
+                                <td class="value">9 581</td>
+                                <td class="value">9 077</td>
+                                <td class="value">504</td>
+                                <td class="value">395h 43m</td>
+                                <td class="value">113 800</td>
+                                <td class="value">68 737</td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td> <a href="/fr/joueur/452197/Ituhaa"> Ituhaa </a> </td>
+                                <td class="value">1 454 705</td>
+                                <td class="value">8 599</td>
+                                <td class="value">7 708</td>
+                                <td class="value">891</td>
+                                <td class="value">440h 51m</td>
+                                <td class="value">125 974</td>
+                                <td class="value">93 888</td>
+                            </tr>
+                            <tr>
+                                <td>21</td>
+                                <td> <a href="/fr/joueur/505649/iGray"> iGray </a> </td>
+                                <td class="value">1 441 501</td>
+                                <td class="value">10 668</td>
+                                <td class="value">9 415</td>
+                                <td class="value">1 253</td>
+                                <td class="value">720h 23m</td>
+                                <td class="value">210 106</td>
+                                <td class="value">114 615</td>
+                            </tr>
+                            <tr>
+                                <td>22</td>
+                                <td> <a href="/fr/joueur/589953/yuistiti"> yuistiti </a> </td>
+                                <td class="value">1 435 848</td>
+                                <td class="value">12 851</td>
+                                <td class="value">10 352</td>
+                                <td class="value">2 499</td>
+                                <td class="value">661h 28m</td>
+                                <td class="value">194 382</td>
+                                <td class="value">148 522</td>
+                            </tr>
+                            <tr>
+                                <td>23</td>
+                                <td> <a href="/fr/joueur/274603/SauceKebab"> SauceKebab </a> </td>
+                                <td class="value">1 427 390</td>
+                                <td class="value">7 812</td>
+                                <td class="value">7 316</td>
+                                <td class="value">496</td>
+                                <td class="value">452h 20m</td>
+                                <td class="value">140 109</td>
+                                <td class="value">57 547</td>
+                            </tr>
+                            <tr>
+                                <td>24</td>
+                                <td> <a href="/fr/joueur/602179/JEANSJEAN"> JEANSJEAN </a> </td>
+                                <td class="value">1 348 533</td>
+                                <td class="value">5 261</td>
+                                <td class="value">3 942</td>
+                                <td class="value">1 319</td>
+                                <td class="value">411h 2m</td>
+                                <td class="value">87 436</td>
+                                <td class="value">64 308</td>
+                            </tr>
+                            <tr>
+                                <td>25</td>
+                                <td> <a href="/fr/joueur/1390015/CatsEye"> CatsEye </a> </td>
+                                <td class="value">1 348 220</td>
+                                <td class="value">9 945</td>
+                                <td class="value">5 858</td>
+                                <td class="value">4 087</td>
+                                <td class="value">644h 35m</td>
+                                <td class="value">163 795</td>
+                                <td class="value">132 888</td>
+                            </tr>
+                            <tr>
+                                <td>26</td>
+                                <td> <a href="/fr/joueur/133536/Deooo_"> Deooo_ </a> </td>
+                                <td class="value">1 330 196</td>
+                                <td class="value">8 144</td>
+                                <td class="value">7 319</td>
+                                <td class="value">825</td>
+                                <td class="value">371h 42m</td>
+                                <td class="value">100 590</td>
+                                <td class="value">61 325</td>
+                            </tr>
+                            <tr>
+                                <td>27</td>
+                                <td> <a href="/fr/joueur/767700/richSasso"> richSasso </a> </td>
+                                <td class="value">1 312 206</td>
+                                <td class="value">15 579</td>
+                                <td class="value">13 496</td>
+                                <td class="value">2 083</td>
+                                <td class="value">907h 59m</td>
+                                <td class="value">236 188</td>
+                                <td class="value">194 744</td>
+                            </tr>
+                            <tr>
+                                <td>28</td>
+                                <td> <a href="/fr/joueur/907336/Souciante"> Souciante </a> </td>
+                                <td class="value">1 297 406</td>
+                                <td class="value">10 613</td>
+                                <td class="value">6 195</td>
+                                <td class="value">4 418</td>
+                                <td class="value">675h 31m</td>
+                                <td class="value">138 999</td>
+                                <td class="value">122 679</td>
+                            </tr>
+                            <tr>
+                                <td>29</td>
+                                <td> <a href="/fr/joueur/1522897/Boostaa"> Boostaa </a> </td>
+                                <td class="value">1 262 282</td>
+                                <td class="value">12 448</td>
+                                <td class="value">8 695</td>
+                                <td class="value">3 753</td>
+                                <td class="value">691h 54m</td>
+                                <td class="value">188 557</td>
+                                <td class="value">156 094</td>
+                            </tr>
+                            <tr>
+                                <td>30</td>
+                                <td> <a href="/fr/joueur/964422/sdnyy"> sdnyy </a> </td>
+                                <td class="value">1 257 989</td>
+                                <td class="value">9 509</td>
+                                <td class="value">6 109</td>
+                                <td class="value">3 400</td>
+                                <td class="value">545h 41m</td>
+                                <td class="value">130 842</td>
+                                <td class="value">127 760</td>
+                            </tr>
+                            <tr>
+                                <td>31</td>
+                                <td> <a href="/fr/joueur/1564275/Blancheur_"> Blancheur_ </a> </td>
+                                <td class="value">1 223 198</td>
+                                <td class="value">7 906</td>
+                                <td class="value">6 355</td>
+                                <td class="value">1 551</td>
+                                <td class="value">507h 22m</td>
+                                <td class="value">98 610</td>
+                                <td class="value">92 529</td>
+                            </tr>
+                            <tr>
+                                <td>32</td>
+                                <td> <a href="/fr/joueur/360993/Nikite_"> Nikite_ </a> </td>
+                                <td class="value">1 193 988</td>
+                                <td class="value">12 938</td>
+                                <td class="value">10 749</td>
+                                <td class="value">2 189</td>
+                                <td class="value">782h 36m</td>
+                                <td class="value">199 710</td>
+                                <td class="value">181 909</td>
+                            </tr>
+                            <tr>
+                                <td>33</td>
+                                <td> <a href="/fr/joueur/791414/Tropicale_"> Tropicale_ </a> </td>
+                                <td class="value">1 175 702</td>
+                                <td class="value">7 215</td>
+                                <td class="value">6 260</td>
+                                <td class="value">955</td>
+                                <td class="value">354h 53m</td>
+                                <td class="value">102 123</td>
+                                <td class="value">81 128</td>
+                            </tr>
+                            <tr>
+                                <td>34</td>
+                                <td> <a href="/fr/joueur/1321756/Svbl1we"> Svbl1we </a> </td>
+                                <td class="value">1 169 430</td>
+                                <td class="value">7 378</td>
+                                <td class="value">5 933</td>
+                                <td class="value">1 445</td>
+                                <td class="value">438h 20m</td>
+                                <td class="value">116 177</td>
+                                <td class="value">72 905</td>
+                            </tr>
+                            <tr>
+                                <td>35</td>
+                                <td> <a href="/fr/joueur/1109076/FujinJr"> FujinJr </a> </td>
+                                <td class="value">1 149 129</td>
+                                <td class="value">7 564</td>
+                                <td class="value">6 117</td>
+                                <td class="value">1 447</td>
+                                <td class="value">349h 31m</td>
+                                <td class="value">68 393</td>
+                                <td class="value">70 924</td>
+                            </tr>
+                            <tr>
+                                <td>36</td>
+                                <td> <a href="/fr/joueur/909247/Neykow"> Neykow </a> </td>
+                                <td class="value">1 141 645</td>
+                                <td class="value">5 980</td>
+                                <td class="value">4 792</td>
+                                <td class="value">1 188</td>
+                                <td class="value">440h 38m</td>
+                                <td class="value">138 348</td>
+                                <td class="value">115 543</td>
+                            </tr>
+                            <tr>
+                                <td>37</td>
+                                <td> <a href="/fr/joueur/1214649/xR0YqL"> xR0YqL </a> </td>
+                                <td class="value">1 140 280</td>
+                                <td class="value">5 569</td>
+                                <td class="value">4 548</td>
+                                <td class="value">1 021</td>
+                                <td class="value">436h 4m</td>
+                                <td class="value">130 311</td>
+                                <td class="value">103 469</td>
+                            </tr>
+                            <tr>
+                                <td>38</td>
+                                <td> <a href="/fr/joueur/544232/Zowlah"> Zowlah </a> </td>
+                                <td class="value">1 138 208</td>
+                                <td class="value">7 321</td>
+                                <td class="value">5 968</td>
+                                <td class="value">1 353</td>
+                                <td class="value">462h 22m</td>
+                                <td class="value">144 640</td>
+                                <td class="value">75 731</td>
+                            </tr>
+                            <tr>
+                                <td>39</td>
+                                <td> <a href="/fr/joueur/225703/Vakkarne"> Vakkarne </a> </td>
+                                <td class="value">1 125 307</td>
+                                <td class="value">8 197</td>
+                                <td class="value">6 991</td>
+                                <td class="value">1 206</td>
+                                <td class="value">474h 34m</td>
+                                <td class="value">134 606</td>
+                                <td class="value">108 726</td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td> <a href="/fr/joueur/402567/vintagebeef"> vintagebeef </a> </td>
+                                <td class="value">1 124 415</td>
+                                <td class="value">10 051</td>
+                                <td class="value">5 949</td>
+                                <td class="value">4 102</td>
+                                <td class="value">531h 0m</td>
+                                <td class="value">103 052</td>
+                                <td class="value">120 489</td>
+                            </tr>
+                            <tr>
+                                <td>41</td>
+                                <td> <a href="/fr/joueur/540220/Barshing"> Barshing </a> </td>
+                                <td class="value">1 123 722</td>
+                                <td class="value">10 084</td>
+                                <td class="value">7 795</td>
+                                <td class="value">2 289</td>
+                                <td class="value">607h 26m</td>
+                                <td class="value">129 960</td>
+                                <td class="value">120 745</td>
+                            </tr>
+                            <tr>
+                                <td>42</td>
+                                <td> <a href="/fr/joueur/100485/Dygros"> Dygros </a> </td>
+                                <td class="value">1 121 380</td>
+                                <td class="value">12 477</td>
+                                <td class="value">9 840</td>
+                                <td class="value">2 637</td>
+                                <td class="value">740h 34m</td>
+                                <td class="value">197 230</td>
+                                <td class="value">172 158</td>
+                            </tr>
+                            <tr>
+                                <td>43</td>
+                                <td> <a href="/fr/joueur/833267/Mitsuguu"> Mitsuguu </a> </td>
+                                <td class="value">1 108 404</td>
+                                <td class="value">9 279</td>
+                                <td class="value">6 288</td>
+                                <td class="value">2 991</td>
+                                <td class="value">1033h 6m</td>
+                                <td class="value">315 364</td>
+                                <td class="value">287 713</td>
+                            </tr>
+                            <tr>
+                                <td>44</td>
+                                <td> <a href="/fr/joueur/96381/NorbertDuMal"> NorbertDuMal </a> </td>
+                                <td class="value">1 090 305</td>
+                                <td class="value">7 977</td>
+                                <td class="value">6 488</td>
+                                <td class="value">1 489</td>
+                                <td class="value">408h 18m</td>
+                                <td class="value">115 361</td>
+                                <td class="value">95 551</td>
+                            </tr>
+                            <tr>
+                                <td>45</td>
+                                <td> <a href="/fr/joueur/145029/MrSmiirk"> MrSmiirk </a> </td>
+                                <td class="value">1 079 742</td>
+                                <td class="value">7 336</td>
+                                <td class="value">6 346</td>
+                                <td class="value">990</td>
+                                <td class="value">535h 45m</td>
+                                <td class="value">151 379</td>
+                                <td class="value">125 606</td>
+                            </tr>
+                            <tr>
+                                <td>46</td>
+                                <td> <a href="/fr/joueur/571269/Dozze"> Dozze </a> </td>
+                                <td class="value">1 073 592</td>
+                                <td class="value">7 287</td>
+                                <td class="value">6 315</td>
+                                <td class="value">972</td>
+                                <td class="value">418h 15m</td>
+                                <td class="value">120 654</td>
+                                <td class="value">90 908</td>
+                            </tr>
+                            <tr>
+                                <td>47</td>
+                                <td> <a href="/fr/joueur/1204208/LegendaryGaby"> LegendaryGaby </a> </td>
+                                <td class="value">1 043 485</td>
+                                <td class="value">5 376</td>
+                                <td class="value">4 486</td>
+                                <td class="value">890</td>
+                                <td class="value">331h 37m</td>
+                                <td class="value">75 991</td>
+                                <td class="value">55 359</td>
+                            </tr>
+                            <tr>
+                                <td>48</td>
+                                <td> <a href="/fr/joueur/1188683/Cha0s_s"> Cha0s_s </a> </td>
+                                <td class="value">1 042 139</td>
+                                <td class="value">6 226</td>
+                                <td class="value">5 361</td>
+                                <td class="value">865</td>
+                                <td class="value">403h 7m</td>
+                                <td class="value">111 874</td>
+                                <td class="value">81 015</td>
+                            </tr>
+                            <tr>
+                                <td>49</td>
+                                <td> <a href="/fr/joueur/1032616/Matt51"> Matt51 </a> </td>
+                                <td class="value">1 041 188</td>
+                                <td class="value">7 788</td>
+                                <td class="value">5 241</td>
+                                <td class="value">2 547</td>
+                                <td class="value">370h 20m</td>
+                                <td class="value">72 056</td>
+                                <td class="value">76 825</td>
+                            </tr>
+                            <tr>
+                                <td>50</td>
+                                <td> <a href="/fr/joueur/1697476/RURF"> RURF </a> </td>
+                                <td class="value">1 039 044</td>
+                                <td class="value">5 120</td>
+                                <td class="value">4 769</td>
+                                <td class="value">351</td>
+                                <td class="value">217h 7m</td>
+                                <td class="value">77 125</td>
+                                <td class="value">35 751</td>
+                            </tr>
+                            <tr>
+                                <td>51</td>
+                                <td> <a href="/fr/joueur/1222495/iShawn"> iShawn </a> </td>
+                                <td class="value">1 034 376</td>
+                                <td class="value">5 670</td>
+                                <td class="value">5 241</td>
+                                <td class="value">429</td>
+                                <td class="value">301h 50m</td>
+                                <td class="value">96 747</td>
+                                <td class="value">61 095</td>
+                            </tr>
+                            <tr>
+                                <td>52</td>
+                                <td> <a href="/fr/joueur/436072/xpbar"> xpbar </a> </td>
+                                <td class="value">1 021 451</td>
+                                <td class="value">9 190</td>
+                                <td class="value">6 597</td>
+                                <td class="value">2 593</td>
+                                <td class="value">497h 26m</td>
+                                <td class="value">121 845</td>
+                                <td class="value">89 404</td>
+                            </tr>
+                            <tr>
+                                <td>53</td>
+                                <td> <a href="/fr/joueur/938825/Lenox_Max"> Lenox_Max </a> </td>
+                                <td class="value">1 021 261</td>
+                                <td class="value">9 204</td>
+                                <td class="value">7 359</td>
+                                <td class="value">1 845</td>
+                                <td class="value">528h 53m</td>
+                                <td class="value">142 470</td>
+                                <td class="value">88 118</td>
+                            </tr>
+                            <tr>
+                                <td>54</td>
+                                <td> <a href="/fr/joueur/1493876/xH11r1"> xH11r1 </a> </td>
+                                <td class="value">1 018 683</td>
+                                <td class="value">7 824</td>
+                                <td class="value">5 341</td>
+                                <td class="value">2 483</td>
+                                <td class="value">436h 33m</td>
+                                <td class="value">111 983</td>
+                                <td class="value">94 039</td>
+                            </tr>
+                            <tr>
+                                <td>55</td>
+                                <td> <a href="/fr/joueur/629449/DexterHMC"> DexterHMC </a> </td>
+                                <td class="value">1 014 324</td>
+                                <td class="value">6 748</td>
+                                <td class="value">4 812</td>
+                                <td class="value">1 936</td>
+                                <td class="value">472h 10m</td>
+                                <td class="value">130 357</td>
+                                <td class="value">107 881</td>
+                            </tr>
+                            <tr>
+                                <td>56</td>
+                                <td> <a href="/fr/joueur/647870/EnderArcana"> EnderArcana </a> </td>
+                                <td class="value">1 009 622</td>
+                                <td class="value">15 145</td>
+                                <td class="value">10 706</td>
+                                <td class="value">4 439</td>
+                                <td class="value">932h 23m</td>
+                                <td class="value">179 431</td>
+                                <td class="value">185 931</td>
+                            </tr>
+                            <tr>
+                                <td>57</td>
+                                <td> <a href="/fr/joueur/1100427/tsew"> tsew </a> </td>
+                                <td class="value">1 007 467</td>
+                                <td class="value">6 156</td>
+                                <td class="value">5 909</td>
+                                <td class="value">247</td>
+                                <td class="value">243h 25m</td>
+                                <td class="value">75 251</td>
+                                <td class="value">41 050</td>
+                            </tr>
+                            <tr>
+                                <td>58</td>
+                                <td> <a href="/fr/joueur/1170840/Caltos_"> Caltos_ </a> </td>
+                                <td class="value">1 003 142</td>
+                                <td class="value">5 934</td>
+                                <td class="value">5 424</td>
+                                <td class="value">510</td>
+                                <td class="value">268h 19m</td>
+                                <td class="value">75 173</td>
+                                <td class="value">59 121</td>
+                            </tr>
+                            <tr>
+                                <td>59</td>
+                                <td> <a href="/fr/joueur/995139/ZAAWL"> ZAAWL </a> </td>
+                                <td class="value">982 418</td>
+                                <td class="value">3 776</td>
+                                <td class="value">2 520</td>
+                                <td class="value">1 256</td>
+                                <td class="value">668h 40m</td>
+                                <td class="value">251 196</td>
+                                <td class="value">182 762</td>
+                            </tr>
+                            <tr>
+                                <td>60</td>
+                                <td> <a href="/fr/joueur/1087947/Koyokii"> Koyokii </a> </td>
+                                <td class="value">969 965</td>
+                                <td class="value">7 380</td>
+                                <td class="value">6 207</td>
+                                <td class="value">1 173</td>
+                                <td class="value">348h 13m</td>
+                                <td class="value">77 580</td>
+                                <td class="value">80 110</td>
+                            </tr>
+                            <tr>
+                                <td>61</td>
+                                <td> <a href="/fr/joueur/697347/cTwiiys"> cTwiiys </a> </td>
+                                <td class="value">961 045</td>
+                                <td class="value">4 224</td>
+                                <td class="value">3 670</td>
+                                <td class="value">554</td>
+                                <td class="value">332h 38m</td>
+                                <td class="value">114 467</td>
+                                <td class="value">72 243</td>
+                            </tr>
+                            <tr>
+                                <td>62</td>
+                                <td> <a href="/fr/joueur/1123146/Emmxrgxncyyy"> Emmxrgxncyyy </a> </td>
+                                <td class="value">948 244</td>
+                                <td class="value">4 416</td>
+                                <td class="value">3 135</td>
+                                <td class="value">1 281</td>
+                                <td class="value">496h 4m</td>
+                                <td class="value">153 054</td>
+                                <td class="value">108 913</td>
+                            </tr>
+                            <tr>
+                                <td>63</td>
+                                <td> <a href="/fr/joueur/465976/Balneaire"> Balneaire </a> </td>
+                                <td class="value">932 260</td>
+                                <td class="value">6 657</td>
+                                <td class="value">5 363</td>
+                                <td class="value">1 294</td>
+                                <td class="value">390h 59m</td>
+                                <td class="value">116 799</td>
+                                <td class="value">71 095</td>
+                            </tr>
+                            <tr>
+                                <td>64</td>
+                                <td> <a href="/fr/joueur/197635/ImYourDino"> ImYourDino </a> </td>
+                                <td class="value">895 041</td>
+                                <td class="value">11 611</td>
+                                <td class="value">6 073</td>
+                                <td class="value">5 538</td>
+                                <td class="value">601h 23m</td>
+                                <td class="value">104 542</td>
+                                <td class="value">155 589</td>
+                            </tr>
+                            <tr>
+                                <td>65</td>
+                                <td> <a href="/fr/joueur/1381194/_Nymphe"> _Nymphe </a> </td>
+                                <td class="value">893 973</td>
+                                <td class="value">6 341</td>
+                                <td class="value">5 925</td>
+                                <td class="value">416</td>
+                                <td class="value">237h 26m</td>
+                                <td class="value">62 009</td>
+                                <td class="value">38 815</td>
+                            </tr>
+                            <tr>
+                                <td>66</td>
+                                <td> <a href="/fr/joueur/184840/Live"> Live </a> </td>
+                                <td class="value">881 307</td>
+                                <td class="value">5 345</td>
+                                <td class="value">4 630</td>
+                                <td class="value">715</td>
+                                <td class="value">253h 25m</td>
+                                <td class="value">62 420</td>
+                                <td class="value">46 776</td>
+                            </tr>
+                            <tr>
+                                <td>67</td>
+                                <td> <a href="/fr/joueur/37713/Seinna"> Seinna </a> </td>
+                                <td class="value">872 827</td>
+                                <td class="value">8 151</td>
+                                <td class="value">3 978</td>
+                                <td class="value">4 173</td>
+                                <td class="value">577h 8m</td>
+                                <td class="value">124 043</td>
+                                <td class="value">119 159</td>
+                            </tr>
+                            <tr>
+                                <td>68</td>
+                                <td> <a href="/fr/joueur/1724245/zlya"> zlya </a> </td>
+                                <td class="value">869 685</td>
+                                <td class="value">4 824</td>
+                                <td class="value">3 931</td>
+                                <td class="value">893</td>
+                                <td class="value">284h 50m</td>
+                                <td class="value">72 389</td>
+                                <td class="value">56 203</td>
+                            </tr>
+                            <tr>
+                                <td>69</td>
+                                <td> <a href="/fr/joueur/748580/Ayieno"> Ayieno </a> </td>
+                                <td class="value">864 188</td>
+                                <td class="value">6 704</td>
+                                <td class="value">5 980</td>
+                                <td class="value">724</td>
+                                <td class="value">348h 23m</td>
+                                <td class="value">95 588</td>
+                                <td class="value">76 642</td>
+                            </tr>
+                            <tr>
+                                <td>70</td>
+                                <td> <a href="/fr/joueur/934201/Yakomy"> Yakomy </a> </td>
+                                <td class="value">862 277</td>
+                                <td class="value">7 622</td>
+                                <td class="value">5 484</td>
+                                <td class="value">2 138</td>
+                                <td class="value">410h 39m</td>
+                                <td class="value">93 830</td>
+                                <td class="value">84 397</td>
+                            </tr>
+                            <tr>
+                                <td>71</td>
+                                <td> <a href="/fr/joueur/638591/Bqbe_"> Bqbe_ </a> </td>
+                                <td class="value">858 851</td>
+                                <td class="value">9 186</td>
+                                <td class="value">5 209</td>
+                                <td class="value">3 977</td>
+                                <td class="value">542h 15m</td>
+                                <td class="value">116 391</td>
+                                <td class="value">127 612</td>
+                            </tr>
+                            <tr>
+                                <td>72</td>
+                                <td> <a href="/fr/joueur/1646769/T1GROUX"> T1GROUX </a> </td>
+                                <td class="value">858 008</td>
+                                <td class="value">4 093</td>
+                                <td class="value">3 833</td>
+                                <td class="value">260</td>
+                                <td class="value">204h 37m</td>
+                                <td class="value">72 624</td>
+                                <td class="value">36 678</td>
+                            </tr>
+                            <tr>
+                                <td>73</td>
+                                <td> <a href="/fr/joueur/935781/Karseys"> Karseys </a> </td>
+                                <td class="value">853 717</td>
+                                <td class="value">8 059</td>
+                                <td class="value">6 458</td>
+                                <td class="value">1 601</td>
+                                <td class="value">416h 15m</td>
+                                <td class="value">113 059</td>
+                                <td class="value">89 950</td>
+                            </tr>
+                            <tr>
+                                <td>74</td>
+                                <td> <a href="/fr/joueur/1274063/FoPasJitter"> FoPasJitter </a> </td>
+                                <td class="value">849 063</td>
+                                <td class="value">5 190</td>
+                                <td class="value">3 786</td>
+                                <td class="value">1 404</td>
+                                <td class="value">322h 22m</td>
+                                <td class="value">91 468</td>
+                                <td class="value">70 002</td>
+                            </tr>
+                            <tr>
+                                <td>75</td>
+                                <td> <a href="/fr/joueur/1699184/Mow_w"> Mow_w </a> </td>
+                                <td class="value">847 693</td>
+                                <td class="value">5 285</td>
+                                <td class="value">4 940</td>
+                                <td class="value">345</td>
+                                <td class="value">193h 26m</td>
+                                <td class="value">61 635</td>
+                                <td class="value">34 676</td>
+                            </tr>
+                            <tr>
+                                <td>76</td>
+                                <td> <a href="/fr/joueur/860/Gouttx_x"> Gouttx_x </a> </td>
+                                <td class="value">842 694</td>
+                                <td class="value">5 500</td>
+                                <td class="value">3 551</td>
+                                <td class="value">1 949</td>
+                                <td class="value">352h 56m</td>
+                                <td class="value">75 363</td>
+                                <td class="value">66 232</td>
+                            </tr>
+                            <tr>
+                                <td>77</td>
+                                <td> <a href="/fr/joueur/1803658/Driizzzy"> Driizzzy </a> </td>
+                                <td class="value">842 123</td>
+                                <td class="value">5 433</td>
+                                <td class="value">4 769</td>
+                                <td class="value">664</td>
+                                <td class="value">218h 21m</td>
+                                <td class="value">44 459</td>
+                                <td class="value">38 463</td>
+                            </tr>
+                            <tr>
+                                <td>78</td>
+                                <td> <a href="/fr/joueur/433769/MalopiX"> MalopiX </a> </td>
+                                <td class="value">834 128</td>
+                                <td class="value">9 866</td>
+                                <td class="value">8 884</td>
+                                <td class="value">982</td>
+                                <td class="value">658h 54m</td>
+                                <td class="value">171 812</td>
+                                <td class="value">152 395</td>
+                            </tr>
+                            <tr>
+                                <td>79</td>
+                                <td> <a href="/fr/joueur/632093/Kaelephant"> Kaelephant </a> </td>
+                                <td class="value">832 840</td>
+                                <td class="value">5 430</td>
+                                <td class="value">4 114</td>
+                                <td class="value">1 316</td>
+                                <td class="value">398h 13m</td>
+                                <td class="value">116 763</td>
+                                <td class="value">75 631</td>
+                            </tr>
+                            <tr>
+                                <td>80</td>
+                                <td> <a href="/fr/joueur/1292481/Baalty"> Baalty </a> </td>
+                                <td class="value">825 756</td>
+                                <td class="value">4 219</td>
+                                <td class="value">3 487</td>
+                                <td class="value">732</td>
+                                <td class="value">317h 48m</td>
+                                <td class="value">92 139</td>
+                                <td class="value">66 429</td>
+                            </tr>
+                            <tr>
+                                <td>81</td>
+                                <td> <a href="/fr/joueur/1234270/AWEKOOO"> AWEKOOO </a> </td>
+                                <td class="value">815 961</td>
+                                <td class="value">4 940</td>
+                                <td class="value">4 543</td>
+                                <td class="value">397</td>
+                                <td class="value">305h 9m</td>
+                                <td class="value">113 283</td>
+                                <td class="value">63 904</td>
+                            </tr>
+                            <tr>
+                                <td>82</td>
+                                <td> <a href="/fr/joueur/932203/ZAIIRIX"> ZAIIRIX </a> </td>
+                                <td class="value">807 930</td>
+                                <td class="value">3 718</td>
+                                <td class="value">2 857</td>
+                                <td class="value">861</td>
+                                <td class="value">255h 24m</td>
+                                <td class="value">63 702</td>
+                                <td class="value">49 071</td>
+                            </tr>
+                            <tr>
+                                <td>83</td>
+                                <td> <a href="/fr/joueur/1657063/oreoooooooo"> oreoooooooo </a> </td>
+                                <td class="value">807 403</td>
+                                <td class="value">9 069</td>
+                                <td class="value">5 952</td>
+                                <td class="value">3 117</td>
+                                <td class="value">534h 26m</td>
+                                <td class="value">119 271</td>
+                                <td class="value">109 499</td>
+                            </tr>
+                            <tr>
+                                <td>84</td>
+                                <td> <a href="/fr/joueur/1534458/Thvlys"> Thvlys </a> </td>
+                                <td class="value">804 671</td>
+                                <td class="value">7 278</td>
+                                <td class="value">5 576</td>
+                                <td class="value">1 702</td>
+                                <td class="value">324h 27m</td>
+                                <td class="value">73 377</td>
+                                <td class="value">80 986</td>
+                            </tr>
+                            <tr>
+                                <td>85</td>
+                                <td> <a href="/fr/joueur/1760544/w5iq"> w5iq </a> </td>
+                                <td class="value">802 676</td>
+                                <td class="value">5 997</td>
+                                <td class="value">5 174</td>
+                                <td class="value">823</td>
+                                <td class="value">256h 27m</td>
+                                <td class="value">61 856</td>
+                                <td class="value">63 520</td>
+                            </tr>
+                            <tr>
+                                <td>86</td>
+                                <td> <a href="/fr/joueur/1565975/adelqaid"> adelqaid </a> </td>
+                                <td class="value">793 165</td>
+                                <td class="value">5 482</td>
+                                <td class="value">3 496</td>
+                                <td class="value">1 986</td>
+                                <td class="value">306h 7m</td>
+                                <td class="value">65 847</td>
+                                <td class="value">59 771</td>
+                            </tr>
+                            <tr>
+                                <td>87</td>
+                                <td> <a href="/fr/joueur/1787268/an0lka"> an0lka </a> </td>
+                                <td class="value">784 260</td>
+                                <td class="value">6 465</td>
+                                <td class="value">5 221</td>
+                                <td class="value">1 244</td>
+                                <td class="value">333h 53m</td>
+                                <td class="value">80 181</td>
+                                <td class="value">75 012</td>
+                            </tr>
+                            <tr>
+                                <td>88</td>
+                                <td> <a href="/fr/joueur/688497/Dvmbkitty"> Dvmbkitty </a> </td>
+                                <td class="value">768 356</td>
+                                <td class="value">8 652</td>
+                                <td class="value">5 778</td>
+                                <td class="value">2 874</td>
+                                <td class="value">440h 20m</td>
+                                <td class="value">90 798</td>
+                                <td class="value">100 743</td>
+                            </tr>
+                            <tr>
+                                <td>89</td>
+                                <td> <a href="/fr/joueur/967459/MOL0"> MOL0 </a> </td>
+                                <td class="value">767 128</td>
+                                <td class="value">8 004</td>
+                                <td class="value">4 985</td>
+                                <td class="value">3 019</td>
+                                <td class="value">453h 32m</td>
+                                <td class="value">94 423</td>
+                                <td class="value">114 938</td>
+                            </tr>
+                            <tr>
+                                <td>90</td>
+                                <td> <a href="/fr/joueur/1214586/SkzTO"> SkzTO </a> </td>
+                                <td class="value">752 463</td>
+                                <td class="value">6 911</td>
+                                <td class="value">5 507</td>
+                                <td class="value">1 404</td>
+                                <td class="value">274h 43m</td>
+                                <td class="value">73 985</td>
+                                <td class="value">44 106</td>
+                            </tr>
+                            <tr>
+                                <td>91</td>
+                                <td> <a href="/fr/joueur/966684/Awthentics"> Awthentics </a> </td>
+                                <td class="value">751 140</td>
+                                <td class="value">7 891</td>
+                                <td class="value">5 904</td>
+                                <td class="value">1 987</td>
+                                <td class="value">415h 3m</td>
+                                <td class="value">104 771</td>
+                                <td class="value">102 531</td>
+                            </tr>
+                            <tr>
+                                <td>92</td>
+                                <td> <a href="/fr/joueur/550451/maouee"> maouee </a> </td>
+                                <td class="value">750 977</td>
+                                <td class="value">8 737</td>
+                                <td class="value">6 076</td>
+                                <td class="value">2 661</td>
+                                <td class="value">452h 35m</td>
+                                <td class="value">86 260</td>
+                                <td class="value">114 666</td>
+                            </tr>
+                            <tr>
+                                <td>93</td>
+                                <td> <a href="/fr/joueur/14456/ByMobi"> ByMobi </a> </td>
+                                <td class="value">736 997</td>
+                                <td class="value">4 673</td>
+                                <td class="value">3 360</td>
+                                <td class="value">1 313</td>
+                                <td class="value">441h 50m</td>
+                                <td class="value">122 203</td>
+                                <td class="value">115 848</td>
+                            </tr>
+                            <tr>
+                                <td>94</td>
+                                <td> <a href="/fr/joueur/1310537/SwzVape_"> SwzVape_ </a> </td>
+                                <td class="value">732 951</td>
+                                <td class="value">3 819</td>
+                                <td class="value">3 383</td>
+                                <td class="value">436</td>
+                                <td class="value">207h 52m</td>
+                                <td class="value">55 907</td>
+                                <td class="value">29 514</td>
+                            </tr>
+                            <tr>
+                                <td>95</td>
+                                <td> <a href="/fr/joueur/32841/_Mitsuki"> _Mitsuki </a> </td>
+                                <td class="value">721 778</td>
+                                <td class="value">8 475</td>
+                                <td class="value">6 084</td>
+                                <td class="value">2 391</td>
+                                <td class="value">532h 24m</td>
+                                <td class="value">200 075</td>
+                                <td class="value">135 552</td>
+                            </tr>
+                            <tr>
+                                <td>96</td>
+                                <td> <a href="/fr/joueur/2237651/hvsoka"> hvsoka </a> </td>
+                                <td class="value">717 427</td>
+                                <td class="value">3 129</td>
+                                <td class="value">2 982</td>
+                                <td class="value">147</td>
+                                <td class="value">180h 44m</td>
+                                <td class="value">51 972</td>
+                                <td class="value">24 881</td>
+                            </tr>
+                            <tr>
+                                <td>97</td>
+                                <td> <a href="/fr/joueur/1427058/Enqlume"> Enqlume </a> </td>
+                                <td class="value">717 394</td>
+                                <td class="value">2 245</td>
+                                <td class="value">1 873</td>
+                                <td class="value">372</td>
+                                <td class="value">226h 58m</td>
+                                <td class="value">64 314</td>
+                                <td class="value">52 166</td>
+                            </tr>
+                            <tr>
+                                <td>98</td>
+                                <td> <a href="/fr/joueur/11232/Loucasiou"> Loucasiou </a> </td>
+                                <td class="value">715 422</td>
+                                <td class="value">10 243</td>
+                                <td class="value">7 899</td>
+                                <td class="value">2 344</td>
+                                <td class="value">471h 14m</td>
+                                <td class="value">106 973</td>
+                                <td class="value">97 191</td>
+                            </tr>
+                            <tr>
+                                <td>99</td>
+                                <td> <a href="/fr/joueur/965961/Soykzu"> Soykzu </a> </td>
+                                <td class="value">714 354</td>
+                                <td class="value">6 516</td>
+                                <td class="value">4 130</td>
+                                <td class="value">2 386</td>
+                                <td class="value">365h 27m</td>
+                                <td class="value">80 234</td>
+                                <td class="value">80 342</td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td> <a href="/fr/joueur/1846173/bonjourtoi1"> bonjourtoi1 </a> </td>
+                                <td class="value">714 158</td>
+                                <td class="value">7 977</td>
+                                <td class="value">4 929</td>
+                                <td class="value">3 048</td>
+                                <td class="value">410h 12m</td>
+                                <td class="value">82 993</td>
+                                <td class="value">95 075</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="funfoot">
+        <div id="funfoot_info">
+            <div class="funhead-container funhead-clearfix">
+                <div class="funfoot_info_block funfoot_info_block1">
+                    <div class="funfoot_info_title">FunCraft</div>
+                    <p> FunCraft est un serveur Minecraft non affilié à Mojang. Nous proposons un service de qualité
+                        accessible gratuitement. </p> <a href="/fr/nous-contacter" class="funfoot_info_link">Nous
+                        contacter</a>
+                </div>
+                <div class="funfoot_info_block funfoot_info_block1">
+                    <div class="funfoot_info_title">Réseaux sociaux</div> <a class="funfoot_info_link" target="_blank"
+                        href="https://www.facebook.com/ascentiafr">Facebook <span
+                            class="funfoot_info_socialname">ascentiafr</span></a> <a class="funfoot_info_link"
+                        target="_blank" href="https://twitter.com/Ascentia_Fr">Twitter <span
+                            class="funfoot_info_socialname">@Ascentia_Fr</span></a> <a class="funfoot_info_link"
+                        target="_blank" href="https://www.youtube.com/c/AscentiaGames">YouTube <span
+                            class="funfoot_info_socialname">AscentiaGames</span></a>
+                </div>
+                <div class="funfoot_info_block funfoot_info_block2">
+                    <div class="funfoot_info_title">Jeux</div>
+                    <ul class="funfoot_games">
+                        <li><a href="/fr/jeux">Rush MDT</a></li>
+                        <li><a href="/fr/jeux">HikaBrain</a></li>
+                        <li><a href="/fr/jeux">SkyWars</a></li>
+                        <li><a href="/fr/jeux">Octogone</a></li>
+                        <li><a href="/fr/jeux">ShootCraft</a></li>
+                        <li><a href="/fr/jeux">Infect&eacute;</a></li>
+                        <li><a href="/fr/jeux">FreeCube</a></li>
+                        <li><a href="/fr/jeux">Blitz</a></li>
+                        <li><a href="/fr/jeux">PvPSmash</a></li>
+                        <li><a href="/fr/jeux">Survival</a></li>
+                        <li><a href="/fr/jeux">Rush RETRO</a></li>
+                        <li><a href="/fr/jeux">LandRush</a></li>
+                    </ul>
+                    <div class="funfoot_powered"> Propulsé par <a href="https://www.ascentia.fr/"
+                            target="_blank">Ascentia</a>. </div>
+                </div>
+            </div>
+        </div>
+        <div id="funfoot_legal">
+            <div class="funhead-container funhead-clearfix">
+                <div class="funfoot_legal_copyright"> Copyright &copy; 2012-2023 <a href="/legal-notice">FunCraft</a> -
+                    Tous droits réservés </div>
+                <ul class="funfoot_legal_links">
+                    <li> <a href="/legal-notice" target="_blank">Mentions Légales</a> </li>
+                    <li> <a href="/tos" target="_blank">Conditions Générales</a> </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="/static/def.js?v=85144d41"></script>
+    <script src="/static/lib/jquery.stickytableheaders.js?v=85144d41"></script>
+    <script src="/static/funcraft/js/leaderboard.js?v=85144d41"></script>
+</body>
+
+</html>

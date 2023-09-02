@@ -1,4 +1,5 @@
 
+from pprint import pprint
 from flask import redirect, render_template
 from globb import Globb
 
@@ -24,6 +25,11 @@ def classement(jeu, mois):
     table_name = clean_for_sql(f"{jeu}__{mois}")
     if not table_name:
         return "Invalid game/month", 400
-    query = f"SELECT * FROM {table_name} LIMIT 100"
+    query = f"SELECT * FROM {table_name} ORDER BY ranking LIMIT 100"
     data = Globb.cursor_rankings.execute(query).fetchall()
-    return data
+    pprint(data)
+
+    return render_template("classement/classement.html"
+                           
+                           
+                           )
