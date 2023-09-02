@@ -1,4 +1,6 @@
 
+import gzip
+import json
 from pprint import pprint
 from flask import redirect, render_template
 from globb import Globb
@@ -25,11 +27,46 @@ def classement(jeu, mois):
     table_name = clean_for_sql(f"{jeu}__{mois}")
     if not table_name:
         return "Invalid game/month", 400
-    query = f"SELECT * FROM {table_name} ORDER BY ranking LIMIT 100"
-    data = Globb.cursor_rankings.execute(query).fetchall()
-    pprint(data)
+    
+    query_rankings = f"SELECT * FROM {table_name} ORDER BY ranking LIMIT 100"
+    rankings = Globb.cursor_rankings.execute(query_rankings).fetchall()
 
-    return render_template("classement/classement.html"
-                           
-                           
+    query_grab_user = f"SELECT * FROM funcraft_stats WHERE id IN {tuple([x[0] for x in rankings])};"
+    users = Globb.cursor.execute(query_grab_user).fetchall()
+
+    final_dict: dict[str, dict[str, int]] = {}
+
+    for ranking in rankings:
+        id = ranking[0]
+        rank = ranking[1]
+        corresponding_user = None
+        for user in users:
+            if user[0] == id:
+                corresponding_user = user
+                break
+        if not corresponding_user:
+            return "Corresponding user not found ! Please report.", 500
+        
+        name = corresponding_user[1]
+
+        user_stats_dict: dict = json.loads(gzip.decompress(corresponding_user[7]))
+        month_stats_dict = user_stats_dict.get(mois)
+        if not month_stats_dict:
+            return "Stats dict doesn't exist for player. This shouldn't happen.", 500
+        month_stats_dict = month_stats_dict.get(jeu)
+        if not month_stats_dict:
+            return "Stats dict doesn't exist for player. This shouldn't happen.", 500
+        month_stats_dict = month_stats_dict["stats"]
+
+        final_dict[rank] = {}
+        final_dict[rank]["id"] = id
+        final_dict[rank]["name"] = name
+        final_dict[rank]["stats"] = {}
+        for stat in month_stats_dict:
+            final_dict[rank]["stats"][stat["name"]] = stat["value"]
+
+    return render_template("classement/classement.html",
+                           rankings = final_dict,
+                           game_name = jeu,
+                           game_display_name = jeu.upper() + "_TEMP"
                            )

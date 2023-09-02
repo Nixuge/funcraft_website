@@ -91,7 +91,8 @@
                     <a class="nav-games-landrush " href="/fr/classement/landrush"> LandRush </a>
                 </div>
             </div>
-            <h2>HikaBrain : Classement</h2>
+            <h2>{{ game_display_name }} : Classement</h2>
+            <!-- TODO: custom months here -->
             <ul class="nav nav-tabs nav-tabs-top">
                 <li class="active"> <a href="/fr/classement/hikabrain/always"> Toujours </a> </li>
                 <li> <a href="/fr/classement/hikabrain/2023-08"> Ao&ucirc;t 2023 </a> </li>
@@ -99,32 +100,12 @@
                 <li> <a href="/fr/classement/hikabrain/2023-06"> Juin 2023 </a> </li>
             </ul>
             <div class="box">
+                <!-- START INJECTED PODIUM -->
                 <div class="leaderboard-podium">
-                    <div class="podium podium-1">
-                        <div class="step"> 1 <div class="trophy game-text-hikabrain"> <i class="fa fa-trophy tooltips"
-                                    title="Trophée HikaBrain"></i> </div>
-                            <div class="head"> <a href="/fr/joueur/430195/Bouhero">
-                                    <div class="name">Bouhero</div> <img
-                                        src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Bouhero/s/6eb6d26422b864ebec65c903179d5470ec554eb6">
-                                </a> </div>
-                        </div>
-                    </div>
-                    <div class="podium podium-2">
-                        <div class="step"> 2 <div class="head"> <a href="/fr/joueur/165013/Dokasa">
-                                    <div class="name">Dokasa</div> <img
-                                        src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/Dokasa/s/167ac91a7d3ee99382688a8d98ea82c0253c9217">
-                                </a> </div>
-                        </div>
-                    </div>
-                    <div class="podium podium-3">
-                        <div class="step"> 3 <div class="head"> <a href="/fr/joueur/1122611/govc">
-                                    <div class="name">govc</div> <img
-                                        src="https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/govc/s/81790f29ddc497b0db423b46c7ffb1714eaf2c87">
-                                </a> </div>
-                        </div>
-                    </div>
                 </div>
+                <!-- END INJECTED PODIUM -->
                 <div class="table-container">
+                    <!-- START INJECTED LEADERBOARD -->
                     <table class="table table-hover leaderboard-table">
                         <thead>
                             <tr>
@@ -136,7 +117,7 @@
                                 <th>D&eacute;faites</th>
                                 <th>Temps de jeu</th>
                                 <th>Kills</th>
-                                <th>Morts</th>
+                                <th>Morts</th>f
                             </tr>
                         </thead>
                         <tbody>
@@ -1242,6 +1223,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    <!-- END INJECTED LEADERBOARD -->
                 </div>
             </div>
         </div>
@@ -1296,6 +1278,17 @@
             </div>
         </div>
     </footer>
+    <!-- NEW SCRIPTS BELOW. -->
+    <!-- NEED TO BE DECLARED BEFORE THE ORIGINAL SCRIPTS -->
+    <script>
+        const gameDisplayName = '{{ game_display_name }}';
+        const gameName = '{{ game_name }}';
+        const rankings = JSON.parse('{{ rankings | tojson}}');
+    </script>
+    <script src="/static/new/classement/classementbuilder.js"></script>
+    <script src="/static/new/classement/podiumbuilder.js"></script>
+    <!-- END NEW SCRIPTS -->
+
     <script src="/static/def.js?v=85144d41"></script>
     <script src="/static/lib/jquery.stickytableheaders.js?v=85144d41"></script>
     <script src="/static/funcraft/js/leaderboard.js?v=85144d41"></script>
