@@ -182,14 +182,20 @@
     <!-- END NEW SCRIPTS -->
     <!-- START NEW STYLES -->
     <style>
-        /* Allow scrolling */
+        /* Allow scrolling & make it look good*/
         .nav-tabs-top {
-            height: 50px;
+            height: 100px;
             overflow: scroll;
+            background-color: #fff;
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
         /* Make fully rounded instead of half */
         .nav-tabs > li > a {
             border-radius: 4px;
+        }
+        .nav-tabs-top > li {
+            height: 46px;
         }
         /* Make fully rounded w all borders the same */
         .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
