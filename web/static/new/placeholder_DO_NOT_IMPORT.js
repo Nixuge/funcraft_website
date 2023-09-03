@@ -5,4 +5,5 @@ const gameDisplayName = "";
 const currentMonth = "";
 const rankings = {};
 const pgames = {};
-const pstats = {}
+const pstats = {};
+const availableMonths = [];

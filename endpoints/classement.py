@@ -1,20 +1,18 @@
 
 import gzip
 import json
-from pprint import pprint
 from flask import redirect, render_template
 from globb import Globb
 
 
 app = Globb.app
 
-valid_chars = "0123456789_abcdefghijklmnopqrstuvwxyz"
-def clean_for_sql(table_name: str):
-    table_name = table_name.replace("-", "_")
+valid_chars = "0123456789_-abcdefghijklmnopqrstuvwxyz"
+def has_invalid_chars(table_name: str):
     for char in table_name:
         if char not in valid_chars:
-            return None
-    return table_name
+            return True
+    return False
 
 @app.route("/fr/classement/<jeu>")
 @app.route("/classement/<jeu>")
@@ -24,21 +22,25 @@ def classement_redirect(jeu):
 @app.route("/fr/classement/<jeu>/<mois>")
 @app.route("/classement/<jeu>/<mois>")
 def classement(jeu, mois):
-    table_name = clean_for_sql(f"{jeu}__{mois}")
-    if not table_name:
-        return "Invalid game/month", 400
-    
     mois_prefix = "month-" + mois if not "always" in mois else mois
 
-    try:
-        query_rankings = f"SELECT * FROM {table_name} ORDER BY ranking LIMIT 100"
-        rankings = Globb.cursor_rankings.execute(query_rankings).fetchall()
-    except:
-        return f"""<h1>===== Temporary page =====<br>
-        Unavailable game/month combination.<br>
-        The selector for this combination will be removed in a future update.<br><br>
-        <a href='/classement/{jeu}/always'>Back to always stats</a>
-        <style>*{'{text-align: center}'}</style>"""
+    # Invalid char checks
+    if has_invalid_chars(jeu):
+        return "Invalid chars in game", 400
+    elif has_invalid_chars(mois):
+        return "Invalid chars in month"
+    
+    # Existing month checks
+    available_months = Globb.leaderboard_available_months.get(jeu)
+    if not available_months:
+        return "Game doesn't exist."
+    if not mois in available_months:
+        return "Specified Month doesn't have stats for provided game"
+    
+    table_name = f"{jeu}__{mois.replace('-', '_')}"
+
+    query_rankings = f"SELECT * FROM {table_name} ORDER BY ranking LIMIT 100"
+    rankings = Globb.cursor_rankings.execute(query_rankings).fetchall()
 
     query_grab_user = f"SELECT * FROM funcraft_stats WHERE id IN {tuple([x[0] for x in rankings])};"
     users = Globb.cursor.execute(query_grab_user).fetchall()
@@ -81,5 +83,6 @@ def classement(jeu, mois):
                            rankings = final_dict,
                            game_name = jeu,
                            game_display_name = Globb.game_names.get(jeu, "Report if you see this."),
-                           month = mois
+                           available_months = available_months,
+                           current_month = mois
                            )

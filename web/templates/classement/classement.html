@@ -92,13 +92,10 @@
                 </div>
             </div>
             <h2>{{ game_display_name }} : Classement</h2>
-            <!-- TODO: custom months here -->
+            <!-- START CUSTOM MONTHS -->
             <ul class="nav nav-tabs nav-tabs-top">
-                <li> <a href="/fr/classement/{{ game_name }}/always"> Toujours </a> </li>
-                <li> <a href="/fr/classement/{{ game_name }}/2023-08"> Ao&ucirc;t 2023 </a> </li>
-                <li> <a href="/fr/classement/{{ game_name }}/2023-07"> Juillet 2023 </a> </li>
-                <li> <a href="/fr/classement/{{ game_name }}/2023-06"> Juin 2023 </a> </li>
             </ul>
+            <!-- END CUSTOM MONTHS -->
             <div class="box">
                 <!-- START INJECTED PODIUM -->
                 <div class="leaderboard-podium">
@@ -166,16 +163,40 @@
     <!-- NEW SCRIPTS BELOW. -->
     <!-- NEED TO BE DECLARED BEFORE THE ORIGINAL SCRIPTS -->
     <script>
+        function sortDateYYYY_MM(a, b) {
+            a = a.split("-");
+            b = b.split("-");
+            return new Date(a[0], a[1], 1) - new Date(b[0], b[1], 1);
+        }
         const gameDisplayName = '{{ game_display_name }}';
         const gameName = '{{ game_name }}';
-        const currentMonth = '{{ month }}';
+        const availableMonths = JSON.parse('{{ available_months | tojson}}').sort(sortDateYYYY_MM);
+        const currentMonth = '{{ current_month }}';
         const rankings = JSON.parse('{{ rankings | tojson}}');
     </script>
     <script src="/static/new/nixutils.js"></script>
+    <script src="/static/new/leaderboard/leaderboardnavbar.js"></script>
     <script src="/static/new/leaderboard/leaderboardutils.js"></script>
     <script src="/static/new/leaderboard/leaderboardbuilder.js"></script>
     <script src="/static/new/leaderboard/podiumbuilder.js"></script>
     <!-- END NEW SCRIPTS -->
+    <!-- START NEW STYLES -->
+    <style>
+        /* Allow scrolling */
+        .nav-tabs-top {
+            height: 50px;
+            overflow: scroll;
+        }
+        /* Make fully rounded instead of half */
+        .nav-tabs > li > a {
+            border-radius: 4px;
+        }
+        /* Make fully rounded w all borders the same */
+        .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+            border-bottom-color: #ddd;
+        }
+    </style>
+    <!-- END NEW STYLES -->
 
     <script src="/static/def.js?v=85144d41"></script>
     <script src="/static/lib/jquery.stickytableheaders.js?v=85144d41"></script>
