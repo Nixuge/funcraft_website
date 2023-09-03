@@ -22,6 +22,10 @@ function formatSpaceThousands(count) {
 function formatStatResult(key, value) {
     if (key == "play_time")
         return formatSToHHMM(value)
-        
+
+    // Avoid NaNs if value isn't found in dict
+    if (value == null)
+        return 0;
+
     return formatSpaceThousands(Math.round(value));
 }
