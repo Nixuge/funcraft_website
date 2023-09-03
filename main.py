@@ -11,6 +11,8 @@ import endpoints.head
 import endpoints.joueur
 import endpoints.classement
 
+import endpoints.forum.forum
+
 
 if __name__ == "__main__":
     print("Starting webserver")
