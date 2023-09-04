@@ -10,9 +10,9 @@ const statsKeys = {
     "blitz": [
         {id: "glory", displayName: "Points"},
         {id: "games_played", displayName: "Parties"},
-        {id: "play_time", displayName: "Temps de jeu"},
         {id: "games_won", displayName: "Victoires"},
         {id: "games_lost", displayName: "Défaites"},
+        {id: "play_time", displayName: "Temps de jeu"},
         {id: "kills", displayName: "Kills"},
         {id: "deaths", displayName: "Morts"},
         {id: "nexus_jumps", displayName: "Dégats au Nexus"}
