@@ -31,7 +31,7 @@ query = "SELECT * FROM funcraft_stats WHERE username_upper IS upper(?)"
 def joueur(joueur: str):
     row = Globb.cursor.execute(query, (joueur, )).fetchone()
     if not row or not row[2]:
-        return redirect("/joueurs/")
+        return render_template("error/player_404.html", username=joueur), 404
     
     username = row[1]
     rank = row[2]

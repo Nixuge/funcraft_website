@@ -126,8 +126,3 @@ function getMonthListOrdered() {
     return months;
 }
 const orderedMonths = getMonthListOrdered();
-
-// Replace the friendlist data url.
-// Done this way as i wanted to make the website stay as original as possible,
-// even if it's kinda suboptimal in some places.
-document.getElementById("player-friends-content").setAttribute("data-url", `/joueur/${username}/friendlist`);

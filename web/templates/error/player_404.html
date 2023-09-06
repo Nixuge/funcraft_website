@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Serveur Minecraft Mini-Jeux et PVP GRATUIT. Launcher Ascentia minecraft gratuit.">
+    <meta name="keywords" content="minecraft,mini-jeux,pvp,funcraft,rush,factions,launcher,ascentia,gratuit">
+    <meta name="author" content="Nathan Poirier">
+    <title>Joueurs - FunCraft</title> <!--[if lte IE 9]>
+        <script src="/static/lib/ie_comp/ie_comp.js?v=5ec0cfdB"></script>
+        <![endif]-->
+    <link rel="shortcut icon"
+        href="/static/favicon.ico">
+    <meta name="theme-color" content="#D83C00">
+    <meta name="msapplication-navbutton-color" content="#D83C00">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#D83C00">
+    <link
+        href="/static/def.css?v=5ec0cfdB"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="main-layout">
+        <header id="funhead" class="funhead-clearfix">
+            <div id="funhead-lead">
+                <div class="funhead-container">
+                    <div id="funhead-lead-logo"> <a
+                            href="/fr"> <img
+                                src="/static/funcraft/img/logo_w.png?v=5ec0cfdB"
+                                alt="Logo FunCraft"> </a> </div>
+                    <div id="funhead-lead-right"> <button type="button" class="funhead-btn-menu"> <span></span>
+                            <span></span> <span></span> </button>
+                        <div id="funhead-stats">
+                            <div class="funhead-stats-toggler"> <a
+                                    href="/fr/joueurs">
+                                    2 377 joueurs en ligne </a>
+                                <ul>
+                                    <li> <span>Record de connectés :</span> <strong>18 124</strong> </li>
+                                    <li> <span>Joueurs inscrits :</span> <strong>738 192</strong> </li>
+                                    <li class="funhead-stats-sub"> <span>Premiums :</span> <strong>387 285</strong>
+                                    </li>
+                                    <li class="funhead-stats-sub"> <span>Non-premiums :</span> <strong>350 907</strong>
+                                    </li>
+                                    <li> <a
+                                            href="/fr/joueurs">Plus
+                                            d'informations</a> </li>
+                                </ul>
+                            </div>
+                        </div> <a href="/fr/jouer"
+                            class="funhead-btn-play"> <i class="fa fa-play"></i> Comment jouer ? </a>
+                    </div>
+                    <div id="funhead-lead-ip">
+                        <div>Version : <strong>1.9 ou 1.10</strong></div> <input id="funcraft-server-ip" type="text"
+                            value="funcraft.net" readonly="readonly" onclick="$(this).select()">
+                        <div id="funcraft-server-ip-info"></div>
+                    </div>
+                </div>
+            </div>
+            <nav id="funhead-nav">
+                <div class="funhead-container">
+                    <ul>
+                        <li> <a
+                                href="/fr">Accueil</a>
+                        </li>
+                        <li> <a
+                                href="/fr/jeux">Jeux</a>
+                        </li>
+                        <li class="active"> <a
+                                href="/fr/joueurs">Joueurs</a>
+                        </li>
+                        <li> <a
+                                href="/forum/">Forum</a>
+                        </li>
+                        <li> <a
+                                href="/fr/classement">Classement</a>
+                        </li>
+                        <li> <a href="/fr/boutique"><i
+                                    class="fa fa-shopping-cart"></i> Boutique </a> </li>
+                    </ul>
+                    <ul class="funhead-nav-right">
+                        <li> <a
+                                href="/fr/mon-compte">Mon
+                                Compte</a> </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="box box-top">
+            <div class="heading heading-top">
+                <div class="container">
+                    <h1>Joueurs</h1>
+                    <ol class="breadcrumb">
+                        <li> <a href="/fr"> <i
+                                    class="fa fa-home"></i> </a> </li>
+                        <li class="active">Joueurs</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="container alert-container">
+            <div class=" alert alert-danger"> <button type="button" class="close" data-dismiss="alert"
+                    aria-hidden="true">&times;</button> Une ou plusieurs erreurs sont survenues :<ul>
+                    <li>Le joueur {{ username }} n'existe pas.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container margin-top">
+            <div class="box">
+                <div class="players-heading"> 2&nbsp;361&nbsp;734 joueurs et toujours plus&nbsp;! </div>
+                <div class="row">
+                    <div class="col-sm-offset-3 col-sm-6">
+                        <form method="GET"
+                            action="/fr/joueur">
+                            <div class="input-group"> <input type="text" class="form-control input-lg"
+                                    placeholder="Tapez un pseudo et appuyez sur Entrée" name="q" autofocus> <span
+                                    class="input-group-btn"> <button class="btn btn-primary btn-lg" type="submit"> <i
+                                            class="fa fa-search"></i> Chercher</button> </span> </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="funfoot">
+        <div id="funfoot_info">
+            <div class="funhead-container funhead-clearfix">
+                <div class="funfoot_info_block funfoot_info_block1">
+                    <div class="funfoot_info_title">FunCraft</div>
+                    <p> FunCraft est un serveur Minecraft non affilié à Mojang. Nous proposons un service de qualité
+                        accessible gratuitement. </p> <a
+                        href="/fr/nous-contacter"
+                        class="funfoot_info_link">Nous contacter</a>
+                </div>
+                <div class="funfoot_info_block funfoot_info_block1">
+                    <div class="funfoot_info_title">Réseaux sociaux</div> <a class="funfoot_info_link" target="_blank"
+                        href="https://www.facebook.com/ascentiafr">Facebook
+                        <span class="funfoot_info_socialname">ascentiafr</span></a> <a class="funfoot_info_link"
+                        target="_blank"
+                        href="https://twitter.com/Ascentia_Fr">Twitter <span
+                            class="funfoot_info_socialname">@Ascentia_Fr</span></a> <a class="funfoot_info_link"
+                        target="_blank"
+                        href="https://www.youtube.com/c/AscentiaGames">YouTube
+                        <span class="funfoot_info_socialname">AscentiaGames</span></a>
+                </div>
+                <div class="funfoot_info_block funfoot_info_block2">
+                    <div class="funfoot_info_title">Jeux</div>
+                    <ul class="funfoot_games">
+                        <li><a
+                                href="/fr/jeux">Rush</a>
+                        </li>
+                        <li><a
+                                href="/fr/jeux">HikaBrain</a>
+                        </li>
+                        <li><a
+                                href="/fr/jeux">Survival</a>
+                        </li>
+                        <li><a
+                                href="/fr/jeux">Blitz</a>
+                        </li>
+                        <li><a
+                                href="/fr/jeux">FreeCube</a>
+                        </li>
+                        <li><a
+                                href="/fr/jeux">SkyWars</a>
+                        </li>
+                        <li><a
+                                href="/fr/jeux">PvPSmash</a>
+                        </li>
+                        <li><a
+                                href="/fr/jeux">ShootCraft</a>
+                        </li>
+                        <li><a
+                                href="/fr/jeux">Infect&eacute;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="funfoot_legal">
+            <div class="funhead-container funhead-clearfix">
+                <div class="funfoot_legal_copyright"> Copyright &copy; 2012-2017 <a
+                        href="http://www.ascentia.net/fr/mentions-legales"
+                        target="_blank">Ascentia SAS</a> - Tous droits réservés </div>
+                <ul class="funfoot_legal_links">
+                    <li> <a href="http://www.ascentia.net/fr/mentions-legales"
+                            target="_blank">Mentions Légales</a> </li>
+                    <li> <a href="http://www.ascentia.net/fr/cgu"
+                            target="_blank">Conditions Générales</a> </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script
+        src="/static/def.js?v=5ec0cfdB"></script>
+    <!-- <script> window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+        ga('create', 'UA-74796433-2', 'auto'); ga('send', 'pageview'); </script> -->
+    <!-- <script async
+        src="https://www.google-analytics.com/analytics.js"></script> -->
+    <!-- <script>window.cookieconsent.initialise({ cookie: { name: "CC" }, palette: { popup: { background: "#ffffff", text: "#404040" }, button: { background: "#4b81e8", text: "#ffffff" } }, theme: "classic", content: { message: "Les cookies nous permettent de personnaliser le contenu et les annonces, d'offrir des fonctionnalités relatives aux médias sociaux et d'analyser notre trafic. Nous partageons des informations sur l'utilisation de notre site avec nos partenaires de médias sociaux, de publicité et d'analyse.", dismiss: "Ok", link: "En savoir plus", href: "https://www.ascentia.net/fr/cgu" } })</script> -->
+</body>
+
+</html>
