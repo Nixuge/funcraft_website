@@ -74,7 +74,8 @@ def friendlist(joueur: str):
         return "Player does not exist", 400
     
     if row[8] == None:
-        return "Aucun ami", 200
+        # https://web.archive.org/web/20230815105739/https://www.funcraft.net/fr/joueur/2362116?sendFriends=1
+        return "La liste d'amis est vide.", 200
     
     friendlist = json.loads(gzip.decompress(row[8]))
     
