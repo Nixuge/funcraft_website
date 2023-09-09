@@ -6,6 +6,8 @@ from globb import Globb
 app = Globb.app
 
 @app.route('/')
+@app.route('/fr')
+@app.route('/fr/')
 def index():
     return render_template("index.html")
 
