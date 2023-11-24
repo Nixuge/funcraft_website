@@ -1,3 +1,5 @@
+# Forum pas encore terminé, le reste du site devrait marcher
+
 # Site Funcraft
 Reupload du site de Funcraft, adapté pour marcher avec la db sauvegardée du site.
 
