@@ -1,4 +1,4 @@
-#!/bin/python3
+#!./venv/bin/python
 import os
 from flask import Flask
 from gevent.pywsgi import WSGIServer

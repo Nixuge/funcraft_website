@@ -1,0 +1,16 @@
+[Unit]
+Description=FuncraftWebsite
+After=network.target
+
+[Service]
+SyslogIdentifier=funcraft_website
+Restart=always
+RestartSec=5
+Type=simple
+User=nix
+WorkingDirectory=/home/nix/webservers/funcraft_website
+ExecStart=/home/nix/webservers/funcraft_website/main.py
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target
