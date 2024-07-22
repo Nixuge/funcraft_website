@@ -1,0 +1,400 @@
+@charset "UTF-8";
+
+/* --- EXTRA.css --- */
+
+body {
+    background: #afddfe url('/static/forum/styles/funcraft/img/background.jpg')
+        bottom center fixed no-repeat;
+    /*background: #EEE;*/
+    background-size: cover;
+}
+
+#header > div {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* PREFIX */
+
+a.game-prefix {color:#FFF;}
+
+/* FORMAT BBCODE */
+.baseHtml h2.funBbCode_header {
+    padding: 0;
+    margin: 5px 0 25px;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Verdana;
+    color: rgb(44, 44, 44);
+    
+    background-color: #E4E4E4;
+    -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px;
+}
+
+.baseHtml h3.funBbCode_title {
+    padding: 0;
+    margin: 15px 0 18px;
+    font-weight: normal;
+    font-size: 26px;
+    text-align: left;
+    font-family: Verdana;
+    color: rgb(44, 44, 44);
+    
+    border-left: 3px solid #d83c00;
+    padding-left: 8px;
+    line-height: 1.6;
+}
+
+.baseHtml div.funBbCode_titledesc {
+    font-style: italic;
+}
+
+.funBbCode_title+div.funBbCode_titledesc {
+    border-left: 3px solid #d83c00;
+    padding: 4px 10px;
+    margin-top: -25px;
+    margin-bottom: 25px;
+}
+
+.baseHtml h4.funBbCode_subtitle {
+    padding: 0;
+    margin: 5px 0 10px;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: left;
+    font-family: Verdana;
+    color: rgb(216, 60, 0);
+}
+
+/* USERS BANNERS */
+.userBanner.bannerStaff {
+    display: none;
+}
+
+/* Minecraft Color: Black */
+.userBanner.userRankColBlack {
+    background: #000000;
+    color: #FFF;
+}
+.userBanner.userRankColBlack.wrapped span {
+    background: #000000;
+}
+
+/* Minecraft Color: Dark Blue */
+.userBanner.userRankColDarkBlue {
+    background: #0000AA;
+    color: #FFF;
+}
+.userBanner.userRankColDarkBlue.wrapped span {
+    background: #00002A;
+}
+
+/* Minecraft Color: Dark Green */
+.userBanner.userRankColDarkGreen {
+    background: #00AA00;
+    color: #FFF;
+}
+.userBanner.userRankColDarkGreen.wrapped span {
+    background: #002A00;
+}
+
+/* Minecraft Color: Dark Aqua */
+.userBanner.userRankColDarkAqua {
+    background: #00AAAA;
+    color: #FFF;
+}
+.userBanner.userRankColDarkAqua.wrapped span {
+    background: #002A2A;
+}
+
+/* Minecraft Color: Dark Red */
+.userBanner.userRankColDarkRed {
+    background: #AA0000;
+    color: #FFF;
+}
+.userBanner.userRankColDarkRed.wrapped span {
+    background: #2A0000;
+}
+
+/* Minecraft Color: Dark Purple */
+.userBanner.userRankColDarkPurple {
+    background: #7D347D; /* original: AA00AA */
+    color: #FFF;
+}
+.userBanner.userRankColDarkPurple.wrapped span {
+    background: #2A002A;
+}
+
+/* Minecraft Color: Gold */
+.userBanner.userRankColGold {
+    background: #FFAA00;
+    color: #000;
+}
+.userBanner.userRankColGold.wrapped span {
+    background: #2A2A00;
+}
+
+/* Minecraft Color: Gray */
+.userBanner.userRankColGray {
+    background: #AAAAAA;
+    color: #FFF;
+}
+.userBanner.userRankColGray.wrapped span {
+    background: #2A2A2A;
+}
+
+/* Minecraft Color: Dark Gray */
+.userBanner.userRankColDarkGray {
+    background: #555555;
+    color: #FFF;
+}
+.userBanner.userRankColDarkGray.wrapped span {
+    background: #151515;
+}
+
+/* Minecraft Color: Blue */
+.userBanner.userRankColBlue {
+    background: #5555FF;
+    color: #FFF;
+}
+.userBanner.userRankColBlue.wrapped span {
+    background: #15153F;
+}
+
+/* Minecraft Color: Green */
+.userBanner.userRankColGreen {
+    background: #55FF55;
+    color: #FFF;
+}
+.userBanner.userRankColGreen.wrapped span {
+    background: #153F15;
+}
+
+/* Minecraft Color: Aqua */
+.userBanner.userRankColAqua {
+    background: #55FFFF;
+    color: #FFF;
+}
+.userBanner.userRankColAqua.wrapped span {
+    background: #153F3F;
+}
+
+/* Minecraft Color: Red */
+.userBanner.userRankColRed {
+    background: #FF5555;
+    color: #FFF;
+}
+.userBanner.userRankColRed.wrapped span {
+    background: #3F1515;
+}
+
+/* Minecraft Color: Light Purple */
+.userBanner.userRankColLightPurple {
+    background: #FF55FF;
+    color: #FFF;
+}
+.userBanner.userRankColLightPurple.wrapped span {
+    background: #3F153F;
+}
+
+/* Minecraft Color: Yellow */
+.userBanner.userRankColYellow {
+    background: #FFFF55;
+    color: #000;
+}
+.userBanner.userRankColYellow.wrapped span {
+    background: #3F3F15;
+}
+
+/* Minecraft Color: White */
+.userBanner.userRankColWhite {
+    background: #FFFFFF;
+    color: #FFF;
+}
+.userBanner.userRankColWhite.wrapped span {
+    background: #3F3F3F;
+}
+
+.userBanner.userRankSpeBlue {
+    background: #006BF1;
+    color: #FFF;
+}
+.userBanner.userRankSpeBlue.wrapped span {
+    background: #002A2A;
+}
+
+.userBanner.userRankColSpeBlack {
+    background: #2B2B2B;
+    color: #FFF;
+}
+.userBanner.userRankColDarkBlue.wrapped span {
+    background: #00002A;
+}
+
+.userBanner.userRankColSpeModoForum {
+    background: #FB822C;
+    color: #FFF;
+}
+.userBanner.userRankColSpeModoForum.wrapped span {
+    background: #9E420D;
+}
+
+/* Sticky Global */
+.discussionListItem.global, .discussionListItem.global .posterAvatar, .discussionListItem.global .stats {
+    background-color: #FFF4BF;
+}
+
+/* LAYOUT */
+.nodeList .node.level_1 {
+    margin-bottom: 8px;  /* From 16px */
+}
+
+.node.level_2 {
+    margin: 2px 0; /* From 4px 0 */
+}
+
+.node .nodeIcon {
+    margin: 5px 10px; /* From 10px */
+}
+
+.node .nodeText {
+    margin: 5px 270px 5px 56px; /* From 10px 270px 10px 56px */
+}
+
+.node .nodeLastPost {
+    margin: 5px 10px; /* From 10px */
+}
+
+.node .nodeControls {
+    margin: 10px 0; /* From 20px 0 */
+}
+
+.node .subForumList {
+    margin: -2px 0 4px; /* From -5px 0 10px */
+}
+
+.node .nodeText, .node .subForumList {
+    margin-left: 52px;
+}
+
+.forum-notice {
+    font-size:1.2em;
+    border: 5px solid #560505;
+    background-color: #750000;
+    color: #FFF;
+    padding: 8px;
+    margin-top: 16px;
+    -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; border-radius: 4px;
+}
+
+.xenTooltip .forum-notice {
+    margin: 0;
+    background: transparent;
+    border: none;
+}
+
+.forum-notice a {
+    color: #FFF;
+    font-weight: bold;
+}
+
+.avatarCropper img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.avatar img, .avatar .img, .avatarCropper, .avatarScaler img {
+    background-color: transparent !important;
+}
+
+.userInfoCentered {
+    margin-top: 4px;
+    text-align: center !important;
+    float: none !important;
+}
+
+#navigation.activeSticky {
+    max-height: 41px;
+}
+
+#navigation.activeSticky .navTabs {
+    height: 42px !important;
+}
+
+#navigation.activeSticky .navTabs .navTab.selected .navLink {
+    background: #d83c00;
+    color: #FFF;
+}
+
+#navigation.activeSticky .publicTabs > li {
+    display: block;
+}
+
+#navigation.activeSticky .publicTabs > li > a.navLink  {
+    display: block;
+}
+
+@media (max-width: 1023px)
+{
+    #header > div:first-child {
+        margin-top: 8px;
+    }
+
+    #navigation .navTabs {
+        padding-bottom: 41px;
+    }
+
+    #navigation .publicTabs {
+        position: relative;
+        width: 100%;
+        top: 41px;
+    }
+    
+    #navigation.activeSticky .pageContent {
+        max-height: 42px !important;
+    }
+    
+    #navigation.activeSticky .navTabs {
+        padding-bottom: 0;
+    }
+    
+    #navigation.activeSticky .publicTabs {
+        top: 0;
+    }
+    
+    #navigation.activeSticky .navRight {
+        position: relative;
+        top: -42px;
+    }
+}
+
+@media (max-width: 480px)
+{
+    #header > div:first-child {
+        margin-top: 0;
+    }
+}
+
+/* CSS returned from cache. */
+/*
+     FILE ARCHIVED ON 18:24:03 Aug 14, 2023 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:04:09 Jul 22, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.658
+  exclusion.robots: 0.056
+  exclusion.robots.policy: 0.044
+  esindex: 0.014
+  cdx.remote: 86.013
+  LoadShardBlock: 159.529 (3)
+  PetaboxLoader3.datanode: 216.488 (5)
+  load_resource: 5116.564 (2)
+  PetaboxLoader3.resolve: 4993.374 (2)
+*/

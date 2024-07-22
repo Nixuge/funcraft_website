@@ -1,0 +1,20 @@
+=======Index.html========
+2 regexes for the heads:
+- https://web.archive.org/web/.*?/https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/(.*?)/s/.*?" (most heads)
+- https://web.archive.org/web/.*?/https://d31zb6ev5hmn3f.cloudfront.net/_u/avatar/head/(.*?)/m/.*?' (your profile -> default head here)
+No idea what's the diff between /s/ and /m/; using the same endpoint for now.
+
+CSS:
+Original format:
+https://community.funcraft.net/css.php?css=xenforo,form,public&amp;style=3&amp;dir=LTR&amp;d=1691416009
+Regex: /web/.*?/https://community.funcraft.net\/css.php\?css=(.*?)"
+Replacement: /static/forum/$1.css"
+
+Regexes used:
+https://web.archive.org/web/.*?/https://community.funcraft.net/
+->
+/static/forum/
+
+https://web.archive.org/web/.*?/https://d31zb6ev5hmn3f.cloudfront.net/
+->
+/static/forum/

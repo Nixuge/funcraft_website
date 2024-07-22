@@ -1,0 +1,14 @@
+/* This makes no sense until I make it actually show the last posts. */
+/* Suboptimal, it still requests, but yeah this is enough for now. */
+.nodeLastPost {
+    display: none;
+}
+/* Same, this should get updated before the other one. */
+.nodeStats dd {
+    display: none !important;
+}
+
+/* Same, can hide only labels for this one (which is what i'm doing) */
+#boardStats dd {
+    display: none;
+}

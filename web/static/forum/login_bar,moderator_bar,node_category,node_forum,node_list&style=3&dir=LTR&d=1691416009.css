@@ -1,0 +1,753 @@
+@charset "UTF-8";
+
+/* --- login_bar.css --- */
+
+/** Login bar basics **/
+
+#loginBar .pageContent 
+{
+	color: rgb(252, 252, 252);
+background-color: rgb(47, 47, 47);
+
+}
+
+	
+
+	#loginBar .pageContent
+	{
+		padding-top: 0;
+		position: relative;
+		_height: 0px;
+	}
+
+	#loginBar a
+	{
+		color: rgba(255,255,255,.8);
+
+	}
+
+	#loginBar form
+	{
+		padding: 16px 0;
+margin: 0 auto;
+display: none;
+line-height: 20px;
+position: relative;
+
+	}
+	
+		#loginBar .xenForm .ctrlUnit,		
+		#loginBar .xenForm .ctrlUnit > dt label
+		{
+			margin: 0;
+			border: none;
+		}
+	
+		#loginBar .xenForm .ctrlUnit > dd
+		{
+			position: relative;
+		}
+	
+	#loginBar .lostPassword,
+	#loginBar .lostPasswordLogin
+	{
+		font-size: 11px;
+	}
+	
+	#loginBar .rememberPassword
+	{
+		font-size: 11px;
+	}
+
+	#loginBar .textCtrl
+	{
+		color: rgb(250, 250, 250);
+background: url(/web/20230814220132im_/https://community.funcraft.net/rgba.php?r=0&g=0&b=0&a=38); background: rgba(0, 0, 0, 0.15); _filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#26000000,endColorstr=#26000000);
+border-color:  rgb(0, 0, 0); border-color:  rgba(0, 0, 0, 0.15); _border-color:  rgb(0, 0, 0);
+
+	}
+	
+	#loginBar .textCtrl[type=text]
+	{
+		font-weight: bold;
+
+	}
+
+	#loginBar .textCtrl:-webkit-autofill /* http://code.google.com/p/chromium/issues/detail?id=1334#c35 */
+	{
+		background: url(/web/20230814220132im_/https://community.funcraft.net/rgba.php?r=0&g=0&b=0&a=38) !important; background: rgba(0, 0, 0, 0.15) !important; _filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#26000000,endColorstr=#26000000);
+		color: rgb(250, 250, 250);
+	}
+
+	#loginBar .textCtrl:focus
+	{
+		background: url(/web/20230814220132im_/https://community.funcraft.net/rgba.php?r=0&g=0&b=0&a=76) none; background: rgba(0, 0, 0, 0.3) none; _filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+
+	}
+	
+	#loginBar input.textCtrl.disabled
+	{
+		color: rgb(118, 118, 118);
+background-color: #000;
+border-style: dashed;
+
+	}
+	
+	#loginBar .button
+	{
+		min-width: 85px;
+		*width: 85px;
+	}
+	
+		#loginBar .button.primary
+		{
+			font-weight: bold;
+		}
+		
+/** changes when eAuth is present **/
+
+#loginBar form.eAuth
+{
+	-x-max-width: 720px; /* normal width + 170px */
+}
+
+	#loginBar form.eAuth .ctrlWrapper
+	{
+		border-right:  1px dotted rgb(252, 252, 252); border-right:  1px dotted rgba(252, 252, 252, .5); _border-right:  1px dotted rgb(252, 252, 252);
+		margin-right: 220px;
+		-webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box;
+	}
+
+	#loginBar form.eAuth #eAuthUnit
+	{
+		position: absolute;
+		top: 0px;
+		right: 0;
+		width: 200px;
+	}
+
+		#eAuthUnit li
+		{
+			margin-top: 10px;
+			line-height: 0;
+		}
+	
+/** handle **/
+
+#loginBar #loginBarHandle label 
+{
+	font-weight: bold;
+font-size: 13px;
+color: #FFF;
+background-color: rgb(47, 47, 47);
+padding: 0 8px;
+-webkit-border-top-left-radius: 0; -moz-border-radius-topleft: 0; -khtml-border-top-left-radius: 0; border-top-left-radius: 0;
+-webkit-border-top-right-radius: 0; -moz-border-radius-topright: 0; -khtml-border-top-right-radius: 0; border-top-right-radius: 0;
+-webkit-border-bottom-right-radius: 2px; -moz-border-radius-bottomright: 2px; -khtml-border-bottom-right-radius: 2px; border-bottom-right-radius: 2px;
+-webkit-border-bottom-left-radius: 2px; -moz-border-radius-bottomleft: 2px; -khtml-border-bottom-left-radius: 2px; border-bottom-left-radius: 2px;
+position: absolute;
+right: 0;
+display: inline-block;
+text-align: center;
+z-index: 1;
+line-height: 30px;
+height: 30px;
+
+}
+
+
+@media (max-width:800px)
+{
+	.Responsive #loginBar form.eAuth .ctrlWrapper
+	{
+		border-right: none;
+		margin-right: 0;
+		padding-top: 16px;
+	}
+
+	.Responsive #loginBar form.eAuth #eAuthUnit
+	{
+		position: static;
+		width: 200px;
+		margin: 0 auto;
+	}
+}
+@media (max-width:610px)
+{
+	.Responsive #loginBar .xenForm .ctrlUnit > dd {padding-left: 0; padding-right: 0;}
+	.Responsive #loginBar form.eAuth #eAuthUnit {width: auto; margin-left: 16px; margin-right: 16px;}
+}
+
+
+
+/* --- moderator_bar.css --- */
+
+#moderatorBar
+{
+	background-color: rgb(43, 43, 43);
+	border-bottom: 1px solid rgb(166, 166, 166);	
+	font-size: 11px;
+}
+
+/*#moderatorBar
+{
+	-webkit-box-shadow: 0 0 5px rgb(118, 118, 118); -moz-box-shadow: 0 0 5px rgb(118, 118, 118); -khtml-box-shadow: 0 0 5px rgb(118, 118, 118); box-shadow: 0 0 5px rgb(118, 118, 118);
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	z-index: 100;
+}
+
+body
+{
+	padding-top: 25px;
+}*/
+
+/* clearfix */ #moderatorBar { zoom: 1; } #moderatorBar:after { content: '.'; display: block; height: 0; clear: both; visibility: hidden; }
+
+#moderatorBar .pageContent
+{
+	padding: 2px 0;
+	overflow: auto;
+}
+
+#moderatorBar a
+{
+	display: inline-block;
+	padding: 2px 10px;
+	-webkit-border-radius: 3px; -moz-border-radius: 3px; -khtml-border-radius: 3px; border-radius: 3px;
+}
+
+#moderatorBar a,
+#moderatorBar .itemCount
+{
+	color: rgb(245, 245, 245);
+}
+
+	#moderatorBar a:hover
+	{
+		text-decoration: none;
+		background-color: rgb(83, 83, 83);
+		color: rgb(252, 252, 252);
+	}
+
+/* TODO: maybe sort out the vertical alignment of the counters so they they are properly centered */
+
+#moderatorBar .itemLabel,
+#moderatorBar .itemCount
+{
+	display: inline-block;
+	height: 16px;
+	line-height: 16px;
+}
+
+#moderatorBar .itemCount
+{	
+	background: rgb(83, 83, 83);
+	padding-left: 6px;
+	padding-right: 6px;
+	
+	text-align: center;
+	
+	font-weight: bold;
+	
+	-webkit-border-radius: 2px; -moz-border-radius: 2px; -khtml-border-radius: 2px; border-radius: 2px;
+	text-shadow: none;
+}
+
+	#moderatorBar .itemCount.alert
+	{
+		background: #e03030;
+		color: white;
+		-webkit-box-shadow: 2px 2px 5px rgba(0,0,0, 0.25); -moz-box-shadow: 2px 2px 5px rgba(0,0,0, 0.25); -khtml-box-shadow: 2px 2px 5px rgba(0,0,0, 0.25); box-shadow: 2px 2px 5px rgba(0,0,0, 0.25);
+	}
+	
+#moderatorBar .adminLink
+{
+	float: right;
+}
+
+#moderatorBar .permissionTest,
+#moderatorBar .permissionTest:hover
+{
+	background: #e03030;
+	color: white;
+	-webkit-box-shadow: 2px 2px 5px rgba(0,0,0, 0.25); -moz-box-shadow: 2px 2px 5px rgba(0,0,0, 0.25); -khtml-box-shadow: 2px 2px 5px rgba(0,0,0, 0.25); box-shadow: 2px 2px 5px rgba(0,0,0, 0.25);
+	font-weight: bold;
+}
+
+/* --- node_list.css --- */
+
+.nodeList { zoom: 1; }
+.nodeList .node {
+	zoom: 1;
+	vertical-align: bottom;
+}
+
+.nodeList .node.level_1
+{
+	margin-bottom: 20px;
+}
+
+.nodeList .node.level_1:last-child
+{
+	margin-bottom: 0;
+}
+
+.nodeList .node.groupNoChildren + .node.groupNoChildren
+{
+	margin-top: -20px;
+}
+
+.node .nodeInfo
+{
+	overflow: hidden; zoom: 1;
+	position: relative;
+}
+
+	.node .nodeInfo.primaryContent,
+	.node .nodeInfo.secondaryContent
+	{
+		padding: 0;
+	}
+
+.node .nodeIcon
+{
+	margin: 10px;
+float: left;
+width: 32px;
+height: 32px;
+	
+}
+
+	.node .forumNodeInfo .nodeIcon,
+	.node .categoryForumNodeInfo .nodeIcon
+	{
+		background: rgb(226, 226, 226) url('/static/forum/styles/uix/uix/nodeicons.png') no-repeat -32px 0;
+
+	}
+
+	.node .forumNodeInfo.unread .nodeIcon,
+	.node .categoryForumNodeInfo.unread .nodeIcon
+	{
+		background: rgb(216, 60, 0) url('/static/forum/styles/uix/uix/nodeicons.png') no-repeat 0 0;
+
+	}
+
+	.node .pageNodeInfo .nodeIcon
+	{
+		background: rgb(226, 226, 226) url('/static/forum/styles/uix/uix/nodeicons.png') no-repeat -96px 0;
+
+	}
+
+	.node .linkNodeInfo .nodeIcon
+	{
+		background: rgb(226, 226, 226) url('/static/forum/styles/uix/uix/nodeicons.png') no-repeat -64px 0;
+
+	}
+
+.node .nodeText
+{
+	margin: 10px 270px 10px 56px;
+min-height: 32px;
+
+}
+
+	.node .nodeText .nodeTitle
+	{	
+		font-weight: bold;
+font-size: 14px;
+font-family: Lato, Helvetica, sans-serif;
+color: rgb(83, 83, 83);
+
+	}
+	
+		.node .unread .nodeText .nodeTitle
+		{
+			font-weight: bold;
+color: rgb(216, 60, 0);
+
+		}
+
+	.node .nodeDescription
+	{
+		font-size: 11px;
+
+	}
+	
+	.hasJs .node .nodeDescriptionTooltip
+	{
+		/* will be shown as a tooltip */
+		display: none;
+	}
+	
+	.Touch .node .nodeDescriptionTooltip
+	{
+		/* touch browsers don't see description tooltips */
+		display: block;
+	}
+
+	.node .nodeStats
+	{
+		font-size: 13px;
+margin-top: 2px;
+line-height: 20px;
+
+	}
+	
+	.node .nodeExtraNote
+	{
+		text-align: right;
+		font-size: 11px;
+		color: rgb(118, 118, 118);
+	}
+	
+	.node .subForumList
+	{
+		overflow: hidden; *zoom: 1;
+		margin: -5px 0 10px;
+		margin-left: 56px;
+	}
+	
+		.node .subForumList li
+		{
+			float: left;
+			width: 31%;
+			margin: 2px 0 2px 2%;
+		}
+		
+			.node .subForumList li .nodeTitle
+			{
+				font-size: 11px;
+				overflow: hidden;
+				white-space: nowrap;
+				word-wrap: normal;
+				text-overflow: ellipsis;
+				
+				font-size: 12px;
+color: rgb(118, 118, 118);
+
+			}
+			
+			.node .subForumList .unread .nodeTitle
+			{
+				font-weight: bold;
+color: rgb(216, 60, 0);
+
+				
+				
+			}
+		
+			.node .subForumList li ol,
+			.node .subForumList li ul
+			{
+				display: none;
+			}
+
+.node .nodeLastPost
+{
+	background-color: rgb(250, 250, 250);
+padding: 8px;
+
+	
+	font-size: 13px;
+background-color: transparent;
+padding: 5px;
+margin: 10px;
+-webkit-border-radius: 2px; -moz-border-radius: 2px; -khtml-border-radius: 2px; border-radius: 2px;
+position: absolute;
+top: 0;
+right: 0;
+line-height: 15px;
+-webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box;
+white-space: nowrap;
+word-wrap: normal;
+overflow: hidden;
+width: 220px;
+height: 40px;
+
+}
+
+.node .nodeLastPost .lastThreadTitle,
+.node .nodeLastPost .lastThreadMeta
+{
+	text-overflow: ellipsis;
+	max-width: 100%;
+	display: block;
+	overflow: hidden;
+}
+
+	.node .nodeLastPost .lastThreadMeta
+	{
+		display: block;
+	}
+
+	.node .nodeLastPost .noMessages
+	{
+		/* line-height: 28px; */
+	}
+
+.node .nodeControls
+{
+	position: absolute;
+	top: 0;
+	right: 240px;
+	margin: 20px 0;
+}
+
+	.node .tinyIcon
+	{
+		font-size: 16px;
+background-color: transparent;
+background-repeat: no-repeat;
+background-position: 0 -448px;
+margin: 1px 4px;
+display: block;
+white-space: nowrap;
+overflow: hidden;
+opacity: 0.25;
+text-align: center;
+width: 16px;
+
+	}
+
+	.node .nodeInfo:hover .tinyIcon[href],
+	.Touch .node .tinyIcon
+	{
+		opacity: 1;
+
+	}
+
+		/*.node .feedIcon
+		{
+			background: transparent url('/web/20230814220132im_/https://community.funcraft.net/styles/uix/xenforo/xenforo-ui-sprite.png') no-repeat -112px -16px;
+		}*/
+
+/* description tooltip */
+
+.nodeDescriptionTip
+{
+	padding: 4px 10px;
+margin-top: -22px;
+line-height: 1.5;
+width: 350px;
+height: auto;
+
+}
+
+	.nodeDescriptionTip .arrow
+	{
+		border: 6px solid transparent;
+border-right-color:  rgb(94, 94, 94); border-right-color:  rgba(94, 94, 94, 0.9); _border-right-color:  rgb(94, 94, 94);
+border-left: 1px none black;
+top: 6px;
+left: -6px;
+bottom: auto;
+
+	}
+	
+	.nodeDescriptionTip.arrowBottom .arrow
+	{
+		top: auto;
+		left: 10px;
+		bottom: -6px;
+		border: 6px solid transparent;
+		border-top-color:  rgb(94, 94, 94); border-top-color:  rgba(94, 94, 94, 0.9); _border-top-color:  rgb(94, 94, 94);
+		border-bottom: 1px none black;
+	}
+	
+/* main area - used for L2 categories and most other nodes */
+
+.nodeList .categoryForumNodeInfo,
+.nodeList .forumNodeInfo,
+.nodeList .pageNodeInfo,
+.nodeList .linkNodeInfo
+{
+	background-color: rgb(250, 250, 250);
+padding: 8px;
+
+	
+	padding: 0;
+}
+
+/* category strip - used for L1 categories and group headers */
+
+.nodeList .categoryStrip
+{
+	font-size: 13px;
+color: rgb(221, 229, 234);
+text-decoration: none;
+background-color: rgb(60, 60, 60);
+padding: 8px 10px;
+margin: 3px auto 0;
+border-width: 0;
+
+	
+	color: rgb(226, 226, 226);
+background-color: rgb(47, 47, 47);
+padding: 0 8px;
+margin: 0;
+border-width: 0;
+-webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; border-radius: 4px;
+min-height: 6px;
+position: relative;
+height: 40px;
+
+}
+
+	.nodeList .categoryStrip .nodeTitle
+	{
+		font-weight: bold;
+font-size: 14px;
+color: #FFF;
+text-transform: uppercase;
+
+	}
+	
+		.nodeList .categoryStrip .nodeTitle a
+		{
+			color: #FFF;
+		}
+
+	.nodeList .categoryStrip .nodeDescription
+	{
+		font-size: 12px;
+color: rgb(226, 226, 226);
+
+	}
+	
+		.nodeList .categoryStrip .nodeDescription a
+		{
+			color: rgb(226, 226, 226);
+		}
+
+.nodeList .node.groupNoChildren + .node.groupNoChildren .categoryStrip
+{
+	display: none;
+}
+
+/* node stats area */
+
+.nodeStats
+{
+	overflow: hidden; zoom: 1;
+}
+
+.nodeStats dl,
+.subForumsPopup
+{
+	float: left;
+	display: block;
+	margin-right: 3px;
+}
+
+.subForumsPopup.Popup .PopupControl.PopupOpen
+{
+	background-image: none;
+}
+
+.subForumsPopup a.PopupControl
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.subForumsPopup .dt
+{
+	color: rgb(118, 118, 118);
+}
+
+.subForumsPopup .PopupOpen .dt
+{
+	color: rgb(44, 44, 44);
+}
+
+.subForumsMenu .node .node /* for depths 2+ */
+{
+	padding-left: 10px;
+}
+
+	.subForumsMenu .node .nodeTitle
+	{
+		font-size: 11px;
+	}
+	
+	.subForumsMenu .node .unread .nodeTitle
+	{
+		font-weight: bold;
+color: rgb(216, 60, 0);
+
+	}
+	
+/** new discussion button below nodelist **/
+
+.nodeListNewDiscussionButton
+{
+	margin-top: 10px;
+	text-align: right;
+}
+
+
+@media (max-width:610px)
+{
+	.Responsive .node .nodeText
+	{
+		margin-right: 0;
+	}
+	
+	.Responsive.Touch .node .nodeDescriptionTooltip,
+	.Responsive .node .nodeDescription
+	{
+		display: none;
+	}
+	
+	
+
+	.Responsive .node .nodeControls
+	{
+		display: none;
+	}
+		
+	.Responsive .node .subForumList
+	{
+		display: none;
+	}
+	
+	.Responsive .nodeDescriptionTip
+	{
+		width: auto;
+		max-width: 350px;
+	}
+}
+
+@media (max-width:480px)
+{
+	.Responsive .subForumsPopup
+	{
+		display: none;
+	}
+}
+
+
+/* CSS returned from cache. */
+/*
+     FILE ARCHIVED ON 22:01:32 Aug 14, 2023 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:04:10 Jul 22, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.814
+  exclusion.robots: 0.061
+  exclusion.robots.policy: 0.045
+  esindex: 0.013
+  cdx.remote: 7.406
+  LoadShardBlock: 61.599 (3)
+  PetaboxLoader3.datanode: 135.811 (5)
+  load_resource: 1981.066
+  PetaboxLoader3.resolve: 1843.277
+  loaddict: 93.617
+*/
