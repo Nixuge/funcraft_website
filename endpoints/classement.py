@@ -3,16 +3,10 @@ import gzip
 import json
 from flask import redirect, render_template
 from globb import Globb
+from utils.db import has_invalid_chars
 
 
 app = Globb.app
-
-valid_chars = "0123456789_-abcdefghijklmnopqrstuvwxyz"
-def has_invalid_chars(table_name: str):
-    for char in table_name:
-        if char not in valid_chars:
-            return True
-    return False
 
 @app.route("/fr/classement/<jeu>")
 @app.route("/classement/<jeu>")

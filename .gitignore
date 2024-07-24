@@ -3,4 +3,4 @@
 
 testdata/
 
-venv/
+.venv/

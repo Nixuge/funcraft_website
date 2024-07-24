@@ -15,6 +15,12 @@ class Globb:
     connection_rankings = sqlite3.connect("rankings.db")
     cursor_rankings = connection_rankings.cursor()
 
+    connection_forum = sqlite3.connect("funcraft_forum.db")
+    cursor_forum = connection_forum.cursor()
+
+    connection_forum_posts = sqlite3.connect("funcraft_forum_posts.db")
+    cursor_forum_posts = connection_forum_posts.cursor()
+
     game_names = {
         "rush": "Rush MDT",
         "hikabrain": "HikaBrain",

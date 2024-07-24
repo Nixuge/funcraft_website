@@ -11,7 +11,8 @@ import endpoints.head
 import endpoints.joueur
 import endpoints.classement
 
-import endpoints.forum.forum
+import endpoints.forum.index
+import endpoints.forum.forums
 
 
 if __name__ == "__main__":

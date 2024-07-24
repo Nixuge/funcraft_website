@@ -4030,7 +4030,7 @@ height: 10px;
 .alerts .newIcon,
 .alertsPopup .newIcon,
 .DismissParent .DismissCtrl {
-	background-image: url(/web/20230814182403im_/https://community.funcraft.net/styles/uix/uix/sprite.png) !important;
+	background-image: url(/static/forum/styles/uix/uix/sprite.png) !important;
 	width: 16px; 
 	height: 16px;
 	background-repeat: no-repeat;
@@ -4105,7 +4105,7 @@ only screen and (                min-resolution: 2dppx) {
 	.alerts .newIcon,
 	.alertsPopup .newIcon,
 	.DismissParent .DismissCtrl {
-		background-image: url(/web/20230814182403im_/https://community.funcraft.net/styles/uix/uix/sprite@2x.png) !important;
+		background-image: url(/static/forum/styles/uix/uix/sprite@2x.png) !important;
 		background-size: 160px 48px;
 	}
          
