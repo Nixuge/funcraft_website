@@ -43,7 +43,7 @@ function makeApplyPagesDiv() {
         htmlElement.dataset.range = "2"
         htmlElement.dataset.start = `${startPagesDiv}`
         htmlElement.dataset.end = `${endPagesDiv}`
-        htmlElement.dataset.last = `${maxPage-1}`
+        htmlElement.dataset.last = `${maxPage}`
         htmlElement.dataset.sentinel = "{{sentinel}}"
         htmlElement.dataset.baseurl = `${baseUrl}/page-{{sentinel}}`
     }

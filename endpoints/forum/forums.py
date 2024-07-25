@@ -10,32 +10,42 @@ def forum_forums_index():
     return redirect("/forum", code=301) # moved permanently as it doesn't exist.
 
 
-def unpack_threads_polls(threads: list[tuple]):
-    if len(threads) == 0:
-        return threads
+# def unpack_threads_polls(threads: list[tuple]):
+#     if len(threads) == 0:
+#         return threads
     
-    # Basically added the polls after & not on all tables (pretty sure I didn't on tables where there weren't any
-    # polls anyways), and so some just don't need any unpacking
-    if len(threads[0]) == 11:
+#     # Basically added the polls after & not on all tables (pretty sure I didn't on tables where there weren't any
+#     # polls anyways), and so some just don't need any unpacking
+#     if len(threads[0]) == 11:
+#         return threads
+    
+#     for i, thread in enumerate(threads):
+#         if thread[11] == None: continue # Skips elements without a poll
+
+#         decompressed = gzip.decompress(thread[11]).decode()
+
+#         decompressed_json = json.loads(decompressed)
+        
+#         # DISCUSSIONS PAGE 5 HAS A PROBLEM W THIS.
+#         # DUMB JSON THINGS
+#         # SEEMS TO ALSO BE HAVING PROBLEMS WITH TITLES THAT HAVE ""S IN THEM.
+#         # SHOULD USE json.dumps DIRECTLY !
+#         decompressed_json["reponses"] = decompressed_json["reponses"].replace("\"", "'").replace("\n", "").replace("\t", "")
+#         # decompressed_json["reponses"] = re.escape(decompressed_json["reponses"].replace("\n", "").replace("\t", ""))
+#         # decompressed_json["reponses"] = html.escape(decompressed_json["reponses"].replace("\n", "").replace("\t", ""))
+#         threads[i] = thread[:-1] + (decompressed_json,)
+
+#     return threads
+
+def rip_polls(threads: list[tuple]): # not required in the sub pages themselves. Ignoring.
+    if len(threads) == 0 or len(threads[0]) == 11:
         return threads
     
     for i, thread in enumerate(threads):
-        if thread[11] == None: continue # Skips elements without a poll
-
-        decompressed = gzip.decompress(thread[11]).decode()
-
-        decompressed_json = json.loads(decompressed)
-        
-        # DISCUSSIONS PAGE 5 HAS A PROBLEM W THIS.
-        # DUMB JSON THINGS
-        # SEEMS TO ALSO BE HAVING PROBLEMS WITH TITLES THAT HAVE ""S IN THEM.
-        # SHOULD USE json.dumps DIRECTLY !
-        decompressed_json["reponses"] = decompressed_json["reponses"].replace("\"", "'").replace("\n", "").replace("\t", "")
-        # decompressed_json["reponses"] = re.escape(decompressed_json["reponses"].replace("\n", "").replace("\t", ""))
-        # decompressed_json["reponses"] = html.escape(decompressed_json["reponses"].replace("\n", "").replace("\t", ""))
-        threads[i] = thread[:-1] + (decompressed_json,)
+        threads[i] = thread[:-1]
 
     return threads
+
 
 PER_PAGE = 20
 @Globb.app.route("/forum/forums/<forum_id>", defaults={"page": "page-1"})
@@ -77,7 +87,7 @@ def forum_subforum(forum_id: str, page: str | None):
     # - Properly capitalized username
     # - Last post for each thread (TODO: modify DB for this)
     # - color for prefix
-    # - (maybe?) organize sticky posts
+    # - no prefix is marked as "null" on the UI
     # - categories (prefixes list)
     # - proper title for each forum/forums page
     # - proper description for each forum/forums page
@@ -90,6 +100,6 @@ def forum_subforum(forum_id: str, page: str | None):
                            count = count,
                            current_page = page_int,
                            base_url = base_url,
-                           sticky_threads = unpack_threads_polls(sticky_threads),
-                           threads = unpack_threads_polls(threads)
+                           sticky_threads = rip_polls(sticky_threads),
+                           threads = rip_polls(threads)
                            )
