@@ -27,8 +27,12 @@ function makeApplyPagesDiv() {
     if (currentPage > 1)
         finalHtml += `<a href="${baseUrl}/page-${currentPage-1}" class="text">&lt; Préc</a>`;
 
-    const startPagesDiv = Math.max(2, currentPage-2);
-    const endPagesDiv = Math.min(maxPage-1, currentPage+2);
+    let startPagesDiv = Math.max(2, currentPage-2);
+    let endPagesDiv = Math.min(maxPage-1, currentPage+2);
+    if (startPagesDiv == 2)
+        endPagesDiv = Math.min(maxPage, 6)
+    if (endPagesDiv == maxPage-1)
+        startPagesDiv = Math.max(1, maxPage-6)
 
     finalHtml += maxPage > 7 ? makePagesDivComplicated(startPagesDiv, endPagesDiv) : makePagesDivSimple();
 

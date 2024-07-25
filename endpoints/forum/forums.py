@@ -1,6 +1,7 @@
 import gzip
 import json
 from flask import redirect, render_template
+from markupsafe import Markup
 from globb import Globb
 from utils.db import has_invalid_chars
 
@@ -100,6 +101,6 @@ def forum_subforum(forum_id: str, page: str | None):
                            count = count,
                            current_page = page_int,
                            base_url = base_url,
-                           sticky_threads = rip_polls(sticky_threads),
-                           threads = rip_polls(threads)
+                           sticky_threads = json.dumps(rip_polls(sticky_threads)),
+                           threads = json.dumps(rip_polls(threads))
                            )

@@ -565,7 +565,8 @@
                                  </li>
                                  <li> <a
                                     href="/boutique"><i
-                                    class="fa fa-shopping-cart"></i> Boutique </a> </li>
+                                    class="fa fa-shopping-cart"></i> Boutique </a> </li><!-- START ADDITION -->
+									   <li> <a href="/about">À propos</a> </li> <!-- END ADDITION -->
                               </ul>
                               <ul class="funhead-nav-right">
                                  <li>
@@ -1015,9 +1016,11 @@
                     const desc = '{{ desc }}'; // same
 
                     const baseUrl = '{{ base_url }}';
-                    const pageThreads = JSON.parse(`{{ threads | tojson }}`);
-                    const stickyThreads = JSON.parse(`{{ sticky_threads | tojson }}`);
-                    
+
+                    // For some ABSOLUTELY UNKNOWN REASON, tojson adds QUOTES AT THE START & THE END
+                    const pageThreads = JSON.parse(`{{ threads | tojson }}`.slice(1, -1));
+                    const stickyThreads = JSON.parse(`{{ sticky_threads | tojson }}`.slice(1, -1));
+
                     const threadsCount = Number.parseInt('{{ count }}') - stickyThreads.length;
                     const currentPage = Number.parseInt('{{ current_page }}');
                     const maxPage = Math.ceil(threadsCount/20);
