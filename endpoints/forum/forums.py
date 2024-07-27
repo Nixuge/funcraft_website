@@ -88,7 +88,6 @@ def forum_subforum(forum_id: str, page: str | None):
     # - Properly capitalized username
     # - Last post for each thread (TODO: modify DB for this)
     # - color for prefix
-    # - no prefix is marked as "null" on the UI
     # - categories (prefixes list)
     # - proper title for each forum/forums page
     # - proper description for each forum/forums page

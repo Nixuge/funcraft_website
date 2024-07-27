@@ -75,7 +75,7 @@ function makeThread(thread) {
     // title="Auteur de la discussion">${thread.authorName}</a> = should be properly capitalized name
     // prefixXXX & previx_id=XXX to change to actual prefix IDs
     return `
-    <li id="thread-${thread.threadId}" class="discussionListItem visible locked${thread.sticky ? ' sticky' : ''} prefixXXX" data-author="${thread.authorName}">
+    <li id="thread-${thread.threadId}" class="discussionListItem visible locked${thread.sticky ? ' sticky' : ''}${thread.prefix ? ' prefixXXX' : ''} data-author="${thread.authorName}">
     <div class="listBlock posterAvatar">
         <span class="avatarContainer">
         <a href="/forum/members/${thread.authorName}.${thread.authorId}/" class="avatar Av${thread.authorId}s" ndata-avatarhtml="true">
@@ -90,11 +90,11 @@ function makeThread(thread) {
                 ${thread.sticky ? '<span class="sticky" title="Importante">Importante</span>': ''}
             </div>
             <h3 class="title">
-                <a href="?prefix_id=XXX" a="TODO: fix prefix id here (wayback machine?) & fix this kinda (get current route? see original)"
+            ${thread.prefix ? `<a href="?prefix_id=XXX" a="TODO: fix prefix id here (wayback machine?) & fix this kinda (get current route? see original)"
                     class="prefixLink"
                     title="Afficher seulement les discussions ayant comme préfixe '${thread.prefix}'.">
                     <span class="prefix" a="TODO: fix prefix color here (wayback machine?)">${thread.prefix}</span>
-                </a>
+                </a>` : ''}
                 <a href="/forum/${thread.url}"
                     title="" class="PreviewTooltip"
                     data-previewurl="/forum/${thread.url}preview">
