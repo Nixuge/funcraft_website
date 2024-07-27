@@ -1,6 +1,4 @@
 #!./venv/bin/python
-import os
-from flask import Flask
 from gevent.pywsgi import WSGIServer
 
 from globb import Globb
@@ -13,6 +11,7 @@ import endpoints.classement
 
 import endpoints.forum.index
 import endpoints.forum.forums
+import endpoints.forum.threads
 
 
 if __name__ == "__main__":
